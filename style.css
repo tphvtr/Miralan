@@ -1,0 +1,261 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0 auto;
+	min-width: 304px;
+	max-width: 1024px;
+	padding: 0 8px;
+	font-family: 'Roboto', arial, verdana, tahoma;
+}
+header{
+	height: 144px;
+	width: 100%;
+	padding: 8px;
+}
+nav{
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	color: unset;
+}
+a:active{
+	color: unset;
+}
+a:visited{
+	color: unset;
+}
+.wrap{
+	min-width: 304px;
+	max-width: 1024px;
+	margin: 16px auto;
+	padding: 16px 8px;
+}
+.wrap::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.logo{
+	width: 130px;
+	height: 40px;
+	display: block;
+	float: right;
+}
+.logo::before{
+	content: '';
+	display: block;
+	background-image: url(images/logo.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 30px;
+	height: 40px;
+	margin:0 8px 0 0;
+	float: left;
+}
+.logo_head, .logo_descr{
+	display: flex;
+	flex-direction: column;
+	color: black;
+	font-style: normal;
+}
+.logo_head{
+	font-size: 18px;
+	font-weight: bold;
+}
+.logo_descr{
+	font-size: 12px;
+}
+.toggle_menu {
+    display: block;
+    float: left;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    vertical-align: middle;
+}
+.header_menu{
+	opacity: 0;
+	flex-direction: column;
+	padding-left: 8px;
+	list-style-type: none;
+	position: relative;
+	z-index: -1;
+}
+.header_menu li{
+	margin: 4px 0;
+}
+.header_menu a{
+	padding-left: 4px;
+	font-size: 12px;
+}
+.active{
+	border-left: 2px solid #de6d6e;
+	margin-left: -2px;
+}
+input[type="checkbox"]{display: none;}
+#nav_toggle:checked+.toggle_menu::after{
+	transform: rotate(-45deg);
+	margin-top: -8px;
+}
+#nav_toggle:checked+.toggle_menu::before{
+	transform: rotate(45deg);
+	border-bottom: none;
+}
+#nav_toggle:checked~.header_menu{
+	display: flex;
+	opacity: 1;
+	transition: all linear .3s;
+	z-index: 1;
+}
+#nav_toggle:checked~.header_menu a:hover{
+	border-left: 2px solid #de6d6e;
+	margin-left: -2px;
+}
+.toggle_menu::before, .toggle_menu::after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid #ccc;
+    transition: all linear .3s;
+    padding: 2px;
+}
+.toggle_menu::before{
+	border-top: 2px solid #ccc;
+}
+.slider{
+	background-image: url(images/slider.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 0;
+	margin: 8px 0;
+	padding: 23.25%; 
+	color: #fff;
+	position: relative;
+}
+.slider h2{
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+	text-align: center;
+}
+.main_btns{
+	display: flex;
+	justify-content: center;
+	margin: 8px
+}
+.main_top, .main_bot{
+	display: flex;
+}
+.main_btns::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.services{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #4eb9f4;
+	margin: 4px;
+	padding: 16px;
+}
+.services::before{
+	content: '';
+	display: block;
+	background-image: url(images/tickets.png);
+	width: 25px;
+	height: 25px;
+	margin:0 auto 4px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.services::after{
+	content: 'Услуги';
+	display: block;
+	color: #fff;
+	text-align: center;
+	font-size: 8px;
+}
+.pay{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #6fc125;
+	margin: 4px;
+}
+.contacts{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #ff5649;
+	margin: 4px;
+}
+.discount{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #e48f23;
+	margin: 4px;
+}
+@media (min-width: 550px){
+	#nav_toogle, .toggle_menu{
+		display: none;
+	}
+	.header_menu{
+		opacity: 1;
+		display: flex;
+		flex-direction: row;
+		z-index: 1;
+	}
+	.header_menu a:hover{
+
+		border-bottom: 2px solid #de6d6e;
+	}
+	.active{
+		border-left: 0;
+		border-bottom: 2px solid #de6d6e;
+	}
+	.header_menu li{
+		margin:0 8px;
+	}
+	.slider{
+		width: 518px;
+		height: 240px;
+		padding: 120px;
+	}
+	.content{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	}
+	.main_btns{
+		align-items: center;
+	}
+	.main_top, .main_bot{
+		flex-direction: column;
+	}
+	.services{
+		height: 75px;
+		width: 75px;
+	}
+	.services::after{
+		font-size: 12px;
+	}
+	.pay{
+		width: 65px;
+		height: 65px;
+	}
+	.contacts{
+		width: 95px;
+		height: 95px;
+	}
+	.discount{
+		width: 85px;
+		height: 85px;
+	}
+}
