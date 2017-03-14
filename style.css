@@ -1,9 +1,13 @@
 *{
 	box-sizing: border-box;
 }
+html, body{
+	height: 100%;
+}
 body{
+	min-height: 100%;
 	margin: 0 auto;
-	min-width: 304px;
+	min-width: 320px;
 	font-family: 'Roboto', arial, verdana, tahoma;
 }
 header{
@@ -21,8 +25,7 @@ a{
 }
 .wrap{
 	flex: 1;
-	min-width: 304px;
-	max-width: 1024px;
+	min-width: 320px;
 	margin: 16px auto;
 	padding: 16px 8px;
 }
@@ -142,7 +145,7 @@ input[type="checkbox"]{display: none;}
 .main_btns{
 	display: flex;
 	justify-content: center;
-	margin: 8px
+	align-items: center;
 }
 .main_top, .main_bot{
 	display: flex;
@@ -154,7 +157,7 @@ input[type="checkbox"]{display: none;}
 }
 .services{
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 	align-self: center;
 	flex-direction: column;
 	width: 60px;
@@ -186,7 +189,7 @@ input[type="checkbox"]{display: none;}
 }
 .pay{
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 	flex-direction: column;
 	align-self: center;
 	width: 60px;
@@ -218,7 +221,7 @@ input[type="checkbox"]{display: none;}
 }
 .contacts{
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 	align-self: center;
 	flex-direction: column;
 	width: 60px;
@@ -250,7 +253,8 @@ input[type="checkbox"]{display: none;}
 }
 .discount{
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
+	align-content: center;
 	flex-direction: column;
 	width: 60px;
 	height: 60px;
@@ -289,8 +293,6 @@ input[type="checkbox"]{display: none;}
 .services_descr, .pay_descr, .contacts_descr, .discount_descr{
 	opacity: 0;
 	height: 24px;
-	position: relative;
-	top: -12px;
 	color: #fff;
 	text-align: center;
 	font-size: 8px;
@@ -300,7 +302,6 @@ input[type="checkbox"]{display: none;}
 	transform: scale(1.1);
 }
 .services:hover .services_descr{
-		display: block;
 		opacity: 1;
 		transition: all .3s linear;
 }
@@ -328,15 +329,45 @@ input[type="checkbox"]{display: none;}
 		opacity: 1;
 		transition: all .3s linear;
 }
+.content{
+	display: flex;
+	flex-direction: column-reverse;
+}
+.info_block{
+	background-color: #f4f6f9;
+	height: 350px;
+	width: 100%;
+	float:left;
+	margin: 16px auto;
+	border-radius: 4px;
+	border-bottom: 2px #ccc solid;
+}
+.tv:hover{
+	border-radius: 2px;
+	box-shadow: inset 0px 5px 0px 0px cyan;
+}
+.internet:hover{
+	border-radius: 2px;
+	box-shadow: inset 0px 5px 0px 0px red;
+}
+.tv_internet:hover{
+	border-radius: 2px;
+	box-shadow: inset 0px 5px 0px 0px green;
+}
 footer{
 	background-color: #252823;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	height: 50vh;
 }
-@media (min-width: 550px){
+@media (min-width: 650px){
 	header{
 		height: 68px;
+	}
+	.info_block{
+		width: calc(33.333333% - 16px);
+		margin: 0 8px;
 	}
 	#nav_toogle, .toggle_menu{
 		display: none;
@@ -348,12 +379,32 @@ footer{
 		opacity: 1;
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
 		z-index: 1;
 		float: right;
 	}
+	.header_menu a{
+		padding: 4px;
+	}
 	.header_menu a:hover{
-		
 		border-bottom: 2px solid #de6d6e;
+	}
+	.login{
+		background-color: #ff5649;
+		border-radius: 4px;
+		height: 20px;
+		padding: 0 2px;
+	}
+	.login a{
+		color: #fff;
+		text-decoration: underline;
+	}
+	.login:hover a{
+		border-bottom: 0;
+	}
+	.header_menu .login:hover{
+		transition: all linear .3s;
+		transform: scale(1.1);
 	}
 	.active{
 		border-left: 0;
@@ -363,17 +414,18 @@ footer{
 		margin:0 8px;
 		}
 	.slider{
-		width: 640px;
-		height: 240px;
-		padding: 120px;
-	}
-	.content{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+		padding: 160px;
+		max-width: 66%;
+		max-height: 450px;
+		margin: 0;
+		display: block;
 	}
 	.main_btns{
-		align-items: flex-start;
+		float: right;
+		display: flex;
+		align-items: center;
+		min-height: 320px;
+		margin: 0;	
 	}
 	.main_top{
 		height: 196px;
@@ -390,18 +442,18 @@ footer{
 		font-size: 12px;
 	}
 	.contacts::before{
-		top: 0px;
+		top: 12px;
 	}
 	.contacts::after{
 		font-size: 12px;
-		top: -24px;
+		top: -12px;
 	}
 	.discount::before{
-		top: 0;
+		top: 12px;
 	}
 	.discount::after{
 		font-size: 12px;
-		top: -24px;
+		top: -12px;
 	}
 	.services{
 		height: 75px;
@@ -419,4 +471,38 @@ footer{
 		width: 85px;
 		height: 85px;
 	}
+	.content{
+		display: block;
+	}
 }
+@media (min-width: 960px){
+	.services{
+		height: 115px;
+		width: 115px;
+	}
+	.services::before{
+		top: 12px;
+	}
+	.services::after{
+		top: -12px;
+	}
+	.pay{
+		width: 105px;
+		height: 105px;
+	}
+	.pay::before{
+		top: 12px
+	}
+	.pay::after{
+		top: -12px;
+	}
+	.contacts{
+		width: 145px;
+		height: 145px;
+	}
+	.discount{
+		width: 135px;
+		height: 135px;
+	}
+}
+
