@@ -4,29 +4,23 @@
 body{
 	margin: 0 auto;
 	min-width: 304px;
-	max-width: 1024px;
-	padding: 0 8px;
 	font-family: 'Roboto', arial, verdana, tahoma;
 }
 header{
-	height: 144px;
+	height: 64px;
 	width: 100%;
 	padding: 8px;
+  background-color: #e8ecf0;
+  opacity: .8;
 }
 nav{
 	margin: 0;
 }
 a{
 	text-decoration: none;
-	color: unset;
-}
-a:active{
-	color: unset;
-}
-a:visited{
-	color: unset;
 }
 .wrap{
+	flex: 1;
 	min-width: 304px;
 	max-width: 1024px;
 	margin: 16px auto;
@@ -87,8 +81,10 @@ a:visited{
 	margin: 4px 0;
 }
 .header_menu a{
-	padding-left: 4px;
+	text-align: center;
+	padding:0 4px;
 	font-size: 12px;
+	color: #000;
 }
 .active{
 	border-left: 2px solid #de6d6e;
@@ -157,12 +153,15 @@ input[type="checkbox"]{display: none;}
 	clear: both;
 }
 .services{
+	display: flex;
+	justify-content: flex-end;
+	align-self: center;
+	flex-direction: column;
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
 	background-color: #4eb9f4;
 	margin: 4px;
-	padding: 16px;
 }
 .services::before{
 	content: '';
@@ -171,49 +170,189 @@ input[type="checkbox"]{display: none;}
 	width: 25px;
 	height: 25px;
 	margin:0 auto 4px;
+	position: relative;
+	top: 8px;
 	background-size: 100%;
 	background-repeat: no-repeat;
 }
 .services::after{
 	content: 'Услуги';
 	display: block;
+	position: relative;
+	top: -16px;
 	color: #fff;
 	text-align: center;
 	font-size: 8px;
 }
 .pay{
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+	align-self: center;
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
 	background-color: #6fc125;
 	margin: 4px;
 }
+.pay::before{
+	content: '';
+	display: block;
+	background-image: url(images/tickets.png);
+	width: 25px;
+	height: 25px;
+	position: relative;
+	top: 8px;
+	margin:0 auto 4px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.pay::after{
+	content: 'Оплата';
+	display: block;
+	position: relative;
+	top: -16px;
+	color: #fff;
+	text-align: center;
+	font-size: 8px;
+}
 .contacts{
+	display: flex;
+	justify-content: flex-end;
+	align-self: center;
+	flex-direction: column;
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
 	background-color: #ff5649;
 	margin: 4px;
 }
+.contacts::before{
+	content: '';
+	display: block;
+	background-image: url(images/tickets.png);
+	width: 25px;
+	height: 25px;
+	position: relative;
+	top: 8px;
+	margin:0 auto 4px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.contacts::after{
+	content: 'Контакты';
+	display: block;
+	position: relative;
+	top: -16px;
+	color: #fff;
+	text-align: center;
+	font-size: 8px;
+}
 .discount{
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
 	background-color: #e48f23;
 	margin: 4px;
 }
+.discount::before{
+	content: '';
+	display: block;
+	background-image: url(images/tickets.png);
+	width: 25px;
+	height: 25px;
+	position: relative;
+	top: 8px;
+	margin:0 auto 4px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.discount::after{
+	content: 'Акции';
+	display: block;
+	position: relative;
+	top: -16px;
+	color: #fff;
+	text-align: center;
+	font-size: 8px;
+}
+.services:hover:before, .services:hover:after, 
+.pay:hover:before, .pay:hover:after, 
+.contacts:hover:before, .contacts:hover:after, 
+.discount:hover:before, .discount:hover:after{	
+		opacity: 0.3;
+		transition: all .3s linear; 
+}
+.services_descr, .pay_descr, .contacts_descr, .discount_descr{
+	opacity: 0;
+	height: 24px;
+	position: relative;
+	top: -12px;
+	color: #fff;
+	text-align: center;
+	font-size: 8px;
+}
+.services:hover{
+	transition: all linear .3s;
+	transform: scale(1.1);
+}
+.services:hover .services_descr{
+		display: block;
+		opacity: 1;
+		transition: all .3s linear;
+}
+.pay:hover{
+	transition: all linear .3s;
+	transform: scale(1.1);
+}
+.pay:hover .pay_descr{
+		opacity: 1;
+		transition: all .3s linear;
+}
+.contacts:hover{
+	transition: all linear .3s;
+	transform: scale(1.1);
+}
+.contacts:hover .contacts_descr{
+		opacity: 1;
+		transition: all .3s linear;
+}
+.discount:hover{
+	transition: all linear .3s;
+	transform: scale(1.1);
+}
+.discount:hover .discount_descr{
+		opacity: 1;
+		transition: all .3s linear;
+}
+footer{
+	background-color: #252823;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
 @media (min-width: 550px){
+	header{
+		height: 68px;
+	}
 	#nav_toogle, .toggle_menu{
 		display: none;
+	}
+	.logo{
+		float: left;
 	}
 	.header_menu{
 		opacity: 1;
 		display: flex;
 		flex-direction: row;
 		z-index: 1;
+		float: right;
 	}
 	.header_menu a:hover{
-
+		
 		border-bottom: 2px solid #de6d6e;
 	}
 	.active{
@@ -222,9 +361,9 @@ input[type="checkbox"]{display: none;}
 	}
 	.header_menu li{
 		margin:0 8px;
-	}
+		}
 	.slider{
-		width: 518px;
+		width: 640px;
 		height: 240px;
 		padding: 120px;
 	}
@@ -234,17 +373,39 @@ input[type="checkbox"]{display: none;}
 	justify-content: center;
 	}
 	.main_btns{
-		align-items: center;
+		align-items: flex-start;
+	}
+	.main_top{
+		height: 196px;
 	}
 	.main_top, .main_bot{
 		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.services::after{
+		font-size: 12px;
+	}
+	.pay::after{
+		font-size: 12px;
+	}
+	.contacts::before{
+		top: 0px;
+	}
+	.contacts::after{
+		font-size: 12px;
+		top: -24px;
+	}
+	.discount::before{
+		top: 0;
+	}
+	.discount::after{
+		font-size: 12px;
+		top: -24px;
 	}
 	.services{
 		height: 75px;
 		width: 75px;
-	}
-	.services::after{
-		font-size: 12px;
 	}
 	.pay{
 		width: 65px;
