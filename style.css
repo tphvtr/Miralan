@@ -22,6 +22,7 @@ nav{
 }
 a{
 	text-decoration: none;
+	color: #000;
 }
 .wrap{
 	flex: 1;
@@ -334,25 +335,73 @@ input[type="checkbox"]{display: none;}
 	flex-direction: column-reverse;
 }
 .info_block{
+	display: flex;
+	padding: 16px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	background-color: #f4f6f9;
-	height: 350px;
-	width: 100%;
 	float:left;
 	margin: 16px auto;
 	border-radius: 4px;
 	border-bottom: 2px #ccc solid;
 }
+.info_block h1{
+	margin: 16px;
+	text-align: center;
+}
+.info_block .btn{
+	 color: #fff; 
+  text-decoration: none;
+  user-select: none; 
+  width: 80px;
+  text-align: center;
+ 	padding:6px 0;
+ 	border-radius: 2px;
+  outline: none;
+}
+
+.tv .btn{
+	background-color: #e48f23; 
+}
+.tv:hover .btn{
+	background-color: #ff5649;
+}
 .tv:hover{
-	border-radius: 2px;
-	box-shadow: inset 0px 5px 0px 0px cyan;
+	box-shadow: inset 0px 5px 0px 0px #ff5649;
+	cursor: pointer;
+}
+.internet .btn{
+	background-color: #6fc125;
+}
+.internet:hover .btn{
+	background-color: #ff5649;
 }
 .internet:hover{
-	border-radius: 2px;
-	box-shadow: inset 0px 5px 0px 0px red;
+	box-shadow: inset 0px 5px 0px 0px #ff5649;
+	cursor: pointer;
+}
+.tv_internet .btn{
+	background-color: #4eb9f4;
+}
+.tv_internet:hover .btn{
+	background-color: #ff5649;
 }
 .tv_internet:hover{
+	box-shadow: inset 0px 5px 0px 0px #ff5649;
+	cursor: pointer;
+}
+.tv{
 	border-radius: 2px;
-	box-shadow: inset 0px 5px 0px 0px green;
+	box-shadow: inset 0px 5px 0px 0px #e48f23;
+}
+.internet{
+	border-radius: 2px;
+	box-shadow: inset 0px 5px 0px 0px #6fc125;
+}
+.tv_internet{
+	border-radius: 2px;
+	box-shadow: inset 0px 5px 0px 0px #4eb9f4;
 }
 footer{
 	background-color: #252823;
