@@ -5,11 +5,10 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<title>Miralan - мир без границ</title>
 		<link rel="stylesheet" href="style.css">
-		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 		<link rel="shortcut icon" href="images/favico.ico" type="image/x-icon">
-		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.js"></script>
 		</head>
-	<body ng-app="app">
+	<body>
 		<header>
 			<span class="logo">
 				<i class="logo_head">miralan</i>
@@ -64,74 +63,24 @@
 			</div>
 		</div>
 		<div class="wrap">
-			<form class="info_block tv">
-				<h1>Телебачення</h1>
-				<div class="info_wrap">
-					<span class="analog_chnls">Аналогових каналiв</span>
-					<span class="digital_chnls">Цифрових каналiв</span>
-					<span class="abonplata_tv">Абонплата</span>
-				</div>
-				<button type="submit" class="btn">Замовити</button>
-			</form>		
-			<form class="info_block internet">
-				<h1>Iнтернет</h1>
-				<div class="info_wrap" ng-controller="Internet">
-					<label  for="speed_internet" class="speed_internet">
-						<select id="speed_internet" ng-model="ddlViewBy" ng-options="item as item.text for item in items" required>
-							<option value="">Обери швидкiсть</option>
-						</select>
-					</label>
-					<span class="credit">Кредит</span>
-					<div class="abonplata_wrap">
-						<span class="abonplata_tv_internet">Абонплата</span>
-						<span>{{ddlViewBy.value}}</span>
-					</div>
-				</div>
-				<button type="submit" class="btn">Замовити</button>
-			</form>	
-			<form class="info_block tv_internet">
-				<h1>ТБ+Iнтернет</h1>
-				<div class="info_wrap" ng-controller="Internet_TV">
-					<label  for="speed_internet_tv" class="speed_internet">
-						<select id="speed_internet_tv" ng-model="ddlViewBy" ng-options="item as item.text for item in items" required>
-							<option value="">Обери швидкiсть</option>
-						</select>
-					</label>
-					<span class="analog_chnls">Аналогових каналiв</span>
-					<span class="digital_chnls">Цифрових каналiв</span>
-					<span class="credit">Кредит</span>
-					<div class="abonplata_wrap">
-						<span class="abonplata_tv_internet">Абонплата</span>
-						<span>{{ddlViewBy.value}}</span>
-					</div>
-				</div>
-				<button type="submit" class="btn">Замовити</button>
-			</form>
+			<article class="info_block tv">
+				<h1 class="article_heading">Телебачення</h1>
+				<span class="info_descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cupiditate ipsa iste. Labore, pariatur, quasi.</span>
+				<a href="tv.html" class="btn">Замовити</a>
+			</article>		
+			<article class="info_block internet">
+				<h1 class="article_heading">Iнтернет</h1>
+				<span class="info_descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro fuga quis commodi dolores, ad, accusantium.</span>
+				<a class="btn">Замовити</a>
+			</article>	
+			<article class="info_block tv_internet">
+				<h1 class="article_heading">ТБ+Iнтернет</h1>
+				<span class="info_descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, illum velit porro, labore inventore pariatur!</span>
+				<a class="btn">Замовити</a>
+			</article>
 		</div>
 		<footer>
-				<p>&copy; Миралан 2017</p>
+				<p class="copyright">&copy; Миралан 2017</p>
 		</footer>
-		<script>
-			var app = angular.module('app', []);
-
-function Internet_TV($scope) {
-  $scope.items = [{
-  	text: '100Мбит/с',
-    value: '120грн/мiс'
-  }, {
-  	text: '10Мбит/с',
-    value: '80грн/мiс'
-  }];   
-}
-function Internet($scope) {
-  $scope.items = [{
-  	text: '100Мбит/с',
-    value: '80грн/мiс'
-  }, {
-  	text: '10Мбит/с',
-    value: '40грн/мiс'
-  }];   
-}
-		</script>
 	</body>
 </html>

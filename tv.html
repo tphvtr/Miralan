@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Miralan - мир без границ</title>
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="shortcut icon" href="images/favico.ico" type="image/x-icon">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		</head>
+	<body>
+		<header>
+			<span class="logo">
+				<i class="logo_head">miralan</i>
+				<i class="logo_descr">Мир без границ</i>
+			</span>
+			<nav>
+				<input type="checkbox" id="nav_toggle">
+				<label class="toggle_menu" for="nav_toggle"></label>
+				<ul class="header_menu">
+					<li><a href="index.html">Головна</a></li>
+					<li><a href="#">Послуги</a></li>
+					<li><a href="#">Оплата</a></li>
+					<li><a href="#">Акції</a></li>
+					<li><a href="#">Контакти</a></li>
+					<li class="login"><a href="#">Вхід</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="wrap content">
+			<div class="main_btns">
+				<div class="main_top">
+					<a href="services.html">
+						<div class="services">
+							<span class="services_descr">Lorem ipsum dolor sit amet
+							</span>
+						</div>
+					</a>
+					<a href="pay.html">
+						<div class="pay">
+							<span class="pay_descr">Lorem ipsum dolor sit amet.
+							</span>
+						</div>
+					</a>
+				</div>
+				<div class="main_bot">
+					<a href="contacts.html">
+						<div class="contacts">
+							<span class="contacts_descr">Lorem ipsum dolor sit amet.
+							</span>
+						</div>
+					</a>
+					<a href="discount.html">
+						<div class="discount">
+							<span class="discount_descr">Lorem ipsum dolor sit amet.
+							</span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="slider">
+				<h2>Место под слайдер</h2>
+			</div>
+		</div>
+		<div class="wrap centering">
+			<article class="info_block tv">
+				<h1 class="info_heading">Пакет "Стартовий ТБ"</h1>
+				<div class="info_wrap">
+					<span class="analog_chnls">Аналогових каналiв</span>
+					<span class="digital_chnls">Цифрових каналiв</span>
+					<span class="abonplata_tv">Абонплата</span>
+					<h3 class="allowance_heading">Ця швидкiсть дозволяє:</h3>
+					<ul class="oportunities">
+						<li>Веб-серфiнг</li>
+						<li>Листування</li>
+						<li>Музика онлайн</li>
+						<li>Онлайн-iгри</li>
+					</ul>
+				</div>
+				<a href="#modal2" class="open_modal btn">Замовити</a>
+			</article>
+		</div>		
+		<div id="modal2" class="modal_div" style="opacity: 0; top: 45%; display: none;">
+			<form action="#" id="feedback">
+				<span class="modal_close">X</span>
+				<h1>Замовити пiдключення</h1>
+				<label for="name">
+					<input type="text"  class="form" id="name" placeholder="Введите имя" required>
+				</label>
+				<label for="e-mail">
+					<input type="number"  class="form" id="number" placeholder="Вкажiть номер телефону" required>
+				</label>
+				<textarea id="comment"  class="form" cols="30" rows="10" placeholder="Залиште коментар"
+				></textarea>
+				<button type="submit" class="btn_place">Вiдправити</button>
+			</form>
+		</div>
+	<div id="overlay" style="display: none;"></div>
+		<footer>
+				<p class="copyright">&copy; Миралан 2017</p>
+		</footer>
+	<script>
+	$(document).ready(function() {
+    var overlay = $('#overlay'); 
+    var open_modal = $('.open_modal'); 
+    var close = $('.modal_close, #overlay'); 
+    var modal = $('.modal_div'); 
+     open_modal.click( function(event){
+         event.preventDefault(); 
+         var div = $(this).attr('href');
+         console.log(div);
+         overlay.fadeIn(400, 
+             function(){ 
+                 $(div)
+                     .css('display', 'block') 
+                     .animate({opacity: 1, top: '50%'}, 200); 
+         });
+     });
+
+     close.click( function(){ 
+            modal
+             .animate({opacity: 0, top: '45%'}, 200, 
+                 function(){ 
+                     $(this).css('display', 'none');
+                     overlay.fadeOut(400);
+                 }
+             );
+     });
+});
+
+	</script>
+	</body>
+</html>
