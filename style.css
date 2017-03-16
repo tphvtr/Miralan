@@ -180,7 +180,7 @@ input[type="checkbox"]{display: none;}
 	background-repeat: no-repeat;
 }
 .services::after{
-	content: 'Услуги';
+	content: 'Послуги';
 	display: block;
 	position: relative;
 	top: -16px;
@@ -244,7 +244,7 @@ input[type="checkbox"]{display: none;}
 	background-repeat: no-repeat;
 }
 .contacts::after{
-	content: 'Контакты';
+	content: 'Контакти';
 	display: block;
 	position: relative;
 	top: -16px;
@@ -276,7 +276,7 @@ input[type="checkbox"]{display: none;}
 	background-repeat: no-repeat;
 }
 .discount::after{
-	content: 'Акции';
+	content: 'Акції';
 	display: block;
 	position: relative;
 	top: -16px;
@@ -336,31 +336,78 @@ input[type="checkbox"]{display: none;}
 }
 .info_block{
 	display: flex;
+	position: relative;
 	padding: 16px;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	justify-content: flex-start;
 	background-color: #f4f6f9;
 	float:left;
+	width: 100%;
+	height: 240px;
 	margin: 16px auto;
 	border-radius: 4px;
 	border-bottom: 2px #ccc solid;
 }
 .info_block h1{
+	font-size: 24px;
 	margin: 16px;
 	text-align: center;
 }
-.info_block .btn{
+.info_wrap{
+	display: flex;
+	flex-direction: column;
+}
+#speed_internet{
+	float: right;
+}
+.speed_internet{
+	display: flex;
+	justify-content: space-between;
+}
+.speed_internet::before{
+	content: 'Швидкicть';
+	display: block;
+}
+.credit::after{
+	content: '5';
+	display: block;
+	float: right;
+}
+.abonplata_tv::after{
+	content: '60грн/мiс';
+	display: block;
+	float: right;
+}
+.abonplata_wrap{
+	display: flex;
+	justify-content: space-between;
+}
+.analog_chnls::after{
+	content: '70';
+	display: block;
+	float: right;
+}
+.digital_chnls::after{
+	content: '80';
+	display: block;
+	float: right;
+}
+.btn{
 	 color: #fff; 
   text-decoration: none;
   user-select: none; 
   width: 80px;
-  text-align: center;
+  margin: 0 auto;
  	padding:6px 0;
  	border-radius: 2px;
-  outline: none;
-}
+  border: 0;
 
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  bottom: 16px;
+}
 .tv .btn{
 	background-color: #e48f23; 
 }
