@@ -158,8 +158,8 @@ input[type="checkbox"]{display: none;}
 	justify-content: center;
 	align-self: center;
 	flex-direction: column;
-	width: 60px;
-	height: 60px;
+	width: 80px;
+	height: 80px;
 	border-radius: 50%;
 	background-color: #4eb9f4;
 	margin: 4px;
@@ -167,9 +167,9 @@ input[type="checkbox"]{display: none;}
 .services::before{
 	content: '';
 	display: block;
-	background-image: url(images/tickets.png);
-	width: 25px;
-	height: 25px;
+	background-image: url(images/services.png);
+	width: 30px;
+	height: 40px;
 	margin:0 auto 4px;
 	position: relative;
 	top: 8px;
@@ -183,15 +183,15 @@ input[type="checkbox"]{display: none;}
 	top: -16px;
 	color: #fff;
 	text-align: center;
-	font-size: 8px;
+	font-size: 10px;
 }
 .pay{
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	align-self: center;
-	width: 60px;
-	height: 60px;
+	width: 80px;
+	height: 80px;
 	border-radius: 50%;
 	background-color: #6fc125;
 	margin: 4px;
@@ -199,9 +199,9 @@ input[type="checkbox"]{display: none;}
 .pay::before{
 	content: '';
 	display: block;
-	background-image: url(images/tickets.png);
-	width: 25px;
-	height: 25px;
+	background-image: url(images/money.png);
+	width: 40px;
+	height: 40px;
 	position: relative;
 	top: 8px;
 	margin:0 auto 4px;
@@ -215,15 +215,15 @@ input[type="checkbox"]{display: none;}
 	top: -16px;
 	color: #fff;
 	text-align: center;
-	font-size: 8px;
+	font-size: 10px;
 }
 .contacts{
 	display: flex;
 	justify-content: center;
 	align-self: center;
 	flex-direction: column;
-	width: 60px;
-	height: 60px;
+	width: 80px;
+	height: 80px;
 	border-radius: 50%;
 	background-color: #ff5649;
 	margin: 4px;
@@ -231,9 +231,9 @@ input[type="checkbox"]{display: none;}
 .contacts::before{
 	content: '';
 	display: block;
-	background-image: url(images/tickets.png);
-	width: 25px;
-	height: 25px;
+	background-image: url(images/auth.png);
+	width: 40px;
+	height: 40px;
 	position: relative;
 	top: 8px;
 	margin:0 auto 4px;
@@ -247,15 +247,15 @@ input[type="checkbox"]{display: none;}
 	top: -16px;
 	color: #fff;
 	text-align: center;
-	font-size: 8px;
+	font-size: 10px;
 }
 .discount{
 	display: flex;
 	justify-content: center;
 	align-content: center;
 	flex-direction: column;
-	width: 60px;
-	height: 60px;
+	width: 80px;
+	height: 80px;
 	border-radius: 50%;
 	background-color: #e48f23;
 	margin: 4px;
@@ -263,9 +263,9 @@ input[type="checkbox"]{display: none;}
 .discount::before{
 	content: '';
 	display: block;
-	background-image: url(images/tickets.png);
-	width: 25px;
-	height: 25px;
+	background-image: url(images/percent.png);
+	width: 40px;
+	height: 40px;
 	position: relative;
 	top: 8px;
 	margin:0 auto 4px;
@@ -279,7 +279,7 @@ input[type="checkbox"]{display: none;}
 	top: -16px;
 	color: #fff;
 	text-align: center;
-	font-size: 8px;
+	font-size: 10px;
 }
 .services:hover:before, .services:hover:after, 
 .pay:hover:before, .pay:hover:after, 
@@ -664,20 +664,20 @@ footer{
 		top: -12px;
 	}
 	.services{
-		height: 75px;
-		width: 75px;
+		height: 95px;
+		width: 95px;
 	}
 	.pay{
-		width: 65px;
-		height: 65px;
-	}
-	.contacts{
-		width: 95px;
-		height: 95px;
-	}
-	.discount{
 		width: 85px;
 		height: 85px;
+	}
+	.contacts{
+		width: 105px;
+		height: 105px;
+	}
+	.discount{
+		width: 105px;
+		height: 105px;
 	}
 	.content{
 		display: block;
