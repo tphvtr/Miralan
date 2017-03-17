@@ -14,6 +14,8 @@ header{
   background-color: #e8ecf0;
   opacity: .8;
   border-bottom: #ccc 2px solid
+  margin: 4px;
+	font-family: 'Open Sans Condensed', sans-serif, arial;
 }
 nav{
 	margin: 0;
@@ -25,6 +27,7 @@ a{
 
 .wrap{
 	min-width: 320px;
+	max-width: 960px;
 	margin: 16px auto;
 	padding: 16px 8px;
 }
@@ -121,26 +124,6 @@ input[type="checkbox"]{display: none;}
 .toggle_menu::before{
 	border-top: 2px solid #ccc;
 }
-.slider{
-	background-image: url(images/slider.jpg);
-	background-size: 100%;
-	background-repeat: no-repeat;
-	width: 100%;
-	height: 0;
-	margin: 8px 0;
-	padding: 23.25%; 
-	color: #fff;
-	position: relative;
-}
-.slider h2{
-	position: relative;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	margin: 0 auto;
-	text-align: center;
-}
 .main_btns{
 	display: flex;
 	justify-content: center;
@@ -154,6 +137,17 @@ input[type="checkbox"]{display: none;}
 	display: block;
 	clear: both;
 }
+.carousel{
+	margin: auto;
+	max-width: 650px;
+	overflow: hidden;
+	background-color: #ccc;
+}
+.carousel-item{
+	display: flex;
+	align-items: center;
+	height: 296px;
+}
 .services{
 	display: flex;
 	justify-content: center;
@@ -164,6 +158,7 @@ input[type="checkbox"]{display: none;}
 	border-radius: 50%;
 	background-color: #4eb9f4;
 	margin: 4px;
+	font-family: 'Open Sans Condensed', sans-serif, arial;
 }
 .services::before{
 	content: '';
@@ -196,6 +191,8 @@ input[type="checkbox"]{display: none;}
 	border-radius: 50%;
 	background-color: #6fc125;
 	margin: 4px;
+	margin: 4px;
+	font-family: 'Open Sans Condensed', sans-serif, arial;
 }
 .pay::before{
 	content: '';
@@ -228,6 +225,8 @@ input[type="checkbox"]{display: none;}
 	border-radius: 50%;
 	background-color: #ff5649;
 	margin: 4px;
+	margin: 4px;
+	font-family: 'Open Sans Condensed', sans-serif, arial;
 }
 .contacts::before{
 	content: '';
@@ -260,6 +259,8 @@ input[type="checkbox"]{display: none;}
 	border-radius: 50%;
 	background-color: #e48f23;
 	margin: 4px;
+	margin: 4px;
+	font-family: 'Open Sans Condensed', sans-serif, arial;
 }
 .discount::before{
 	content: '';
@@ -288,6 +289,7 @@ input[type="checkbox"]{display: none;}
 .discount:hover:before, .discount:hover:after{	
 		opacity: 0.3;
 		transition: all .3s linear; 
+		border-bottom: 0;
 }
 .services_descr, .pay_descr, .contacts_descr, .discount_descr{
 	opacity: 0;
@@ -346,6 +348,8 @@ input[type="checkbox"]{display: none;}
 	margin: 16px 0;
 	border-radius: 4px;
 	border-bottom: 2px #ccc solid;
+	margin: 4px;
+	font-family: 'Open Sans Condensed', sans-serif, arial;
 }
 .article_heading-Tv::after{
 	content: '';
@@ -507,18 +511,17 @@ input[type="checkbox"]{display: none;}
 .btn{
 	 color: #fff; 
   text-decoration: none;
-  user-select: none; 
   width: 100%;
   margin: 0 auto;
  	padding:6px 0;
  	border-top-right-radius: 2px;
  	border-top-left-radius: 2px;
   border: 0;
-  position: absolute;
   display: flex;
   justify-content: center;
   align-self: center;
-  bottom: 0;
+  margin: 4px;
+	font-family: 'Open Sans Condensed', sans-serif, arial;
 }
 .tv .btn{
 	background-color: #e48f23; 
@@ -653,7 +656,6 @@ textarea{
 .btn_place{
 	color: #fff; 
   text-decoration: none;
-  user-select: none; 
   width: 100%;
   margin: 0 auto;
  	padding:6px 0;
@@ -749,13 +751,6 @@ footer{
 	.header_menu li{
 		margin:0 8px;
 		}
-	.slider{
-		padding: 160px;
-		max-width: 66%;
-		max-height: 450px;
-		margin: 0;
-		display: block;
-	}
 	.main_btns{
 		float: right;
 		display: flex;
