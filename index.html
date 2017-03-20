@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="style.css">
 		</head>
 	<body>
+	<div class="page_wrap">
 		<header>
 			<span class="logo">
 				<i class="logo_head">miralan</i>
@@ -62,21 +63,19 @@
 			<div class="slider">
 				<div class="slideshow-container">
 				  <div class="mySlides fade">
-				    <div class="numbertext">1 / 3</div>
 				    <img src="images/slider_first.jpg" style="width:100%;">
-				    <div class="text">Caption Text</div>
+				    <a href="discount.html" class="btn_slider">Замовити</a>
+				    
 				  </div>
 
 				  <div class="mySlides fade">
-				    <div class="numbertext">2 / 3</div>
 				    <img src="images/slider_2.jpg" style="width:100%">
-				    <div class="text">Caption Two</div>
+				    <a href="discount.html" class="btn_slider">Замовити</a>
 				  </div>
 
 				  <div class="mySlides fade">
-				    <div class="numbertext">3 / 3</div>
 				    <img src="images/slider_first.jpg" style="width:100%">
-				    <div class="text">Caption Three</div>
+				    <a href="discount.html" class="btn_slider">Замовити</a>
 				  </div>
 
 				  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -114,9 +113,11 @@
 				</article>
 			</a>
 		</div>
+</div>
 		<footer>
 				<p class="copyright">&copy; Миралан 2017</p>
 		</footer>
+
 		<script>
 			var slideIndex = 1;
 showSlides(slideIndex);
@@ -141,14 +142,15 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block"; 
+  slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+		</script>
+		<script>
+			var slideIndex = 0;
+showSlides_auto();
 
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
+function showSlides_auto() {
     var i;
     var slides = document.getElementsByClassName("mySlides");
     for (i = 0; i < slides.length; i++) {
@@ -157,7 +159,7 @@ function showSlides() {
     slideIndex++;
     if (slideIndex> slides.length) {slideIndex = 1} 
     slides[slideIndex-1].style.display = "block"; 
-    setTimeout(showSlides, 5000); // Change image every 2 seconds
+    setTimeout(showSlides_auto, 5000);
 }
 		</script>
 	</body>
