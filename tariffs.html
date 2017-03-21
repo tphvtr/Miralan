@@ -21,6 +21,7 @@
 			<nav>
 				<input type="checkbox" id="nav_toggle">
 				<label class="toggle_menu" for="nav_toggle"></label>
+				<label class="close_menu" for="nav_toggle"></label>
 				<ul class="header_menu">
 					<li><a href="index.html">Головна</a></li>
 					<li><a href="#">Послуги</a></li>
@@ -35,8 +36,8 @@
 			<article class="info_block tv tv_tariffs" style="margin-top: 0">
 				<h1 class="info_heading_tv">60</h1>
 				<div class="info_wrap">
-					<span class="analog_chnls">Аналогових каналiв</span>
-					<span class="digital_chnls">Цифрових каналiв</span>
+					<span class="analog_chnls">Аналогових каналів</span>
+					<span class="digital_chnls">Цифрових каналів</span>
 				</div>
 				<a href="#modal2" class="open_modal btn">Замовити</a>
 			</article>
@@ -45,8 +46,8 @@
 			<article class="info_block internet">
 				<h1 class="info_heading_internet">40</h1>
 				<div class="info_wrap">
-					<span class="speed_internet">10Мбiт/с</span>
-					<h3 class="allowance_heading">Ця швидкiсть дозволяє:</h3>
+					<span class="speed_internet">10Мбіт/с</span>
+					<h3 class="allowance_heading">Ця швидкість дозволяє:</h3>
 					<ul class="oportunities">
 						<li>Веб-серфiнг</li>
 						<li>Листування</li>
@@ -59,8 +60,8 @@
 			<article class="info_block internet">
 				<h1 class="info_heading_internet">80</h1>
 				<div class="info_wrap">
-					<span class="speed_internet">100Мбiт/с</span>
-					<h3 class="allowance_heading">Ця швидкiсть дозволяє:</h3>
+					<span class="speed_internet">100Мбіт/с</span>
+					<h3 class="allowance_heading">Ця швидкість дозволяє:</h3>
 					<ul class="oportunities">
 						<li>Веб-серфiнг</li>
 						<li>Листування</li>
@@ -91,8 +92,8 @@
 			<article class="info_block tv_internet">
 				<h1 class="info_heading_tv_internet">120</h1>
 				<div class="info_wrap">
-					<span class="analog_chnls">Аналогових каналiв</span>
-					<span class="digital_chnls">Цифрових каналiв</span>
+					<span class="analog_chnls">Аналогових каналів</span>
+					<span class="digital_chnls">Цифрових каналів</span>
 					<span id="SpeedInet" class="speed_internet">100Мбiт/с</span>
 					<h3 class="allowance_heading">Ця швидкiсть дозволяє:</h3>
 					<ul class="oportunities">
@@ -117,7 +118,7 @@
 				</label>
 				<textarea id="comment"  class="form" cols="30" rows="10" placeholder="Залиште коментар"
 				></textarea>
-				<button type="submit" class="btn_place">Вiдправити</button>
+				<button type="submit" class="btn_place">Відправити</button>
 			</form>
 		</div>
 	<div id="overlay" style="display: none;"></div>
@@ -125,40 +126,6 @@
 		<footer>
 				<p class="copyright">&copy; Миралан 2017</p>
 		</footer>
-	<script>
-	$(document).ready(function() {
-    var overlay = $('#overlay'); 
-    var open_modal = $('.open_modal'); 
-    var close = $('.modal_close, #overlay'); 
-    var modal = $('.modal_div'); 
-     open_modal.click( function(event){
-         event.preventDefault(); 
-         var div = $(this).attr('href');
-         console.log(div);
-         overlay.fadeIn(400, 
-             function(){ 
-                 $(div)
-                     .css('display', 'block') 
-                     .animate({opacity: 1, top: '50%'}, 200); 
-         });
-     });
-
-     close.click( function(){ 
-            modal
-             .animate({opacity: 0, top: '45%'}, 200, 
-                 function(){ 
-                     $(this).css('display', 'none');
-                     overlay.fadeOut(400);
-                 }
-             );
-     });
-});
-
-	</script>
-	<script>
-		var speed = document.getElementsByClassName("speed_internet");
-
-
-	</script>
+	<script src="js/jQuery.js" ></script>
 	</body>
 </html>

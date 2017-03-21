@@ -94,9 +94,10 @@ footer, .page_wrap:after {
     cursor: pointer;
     width: 30px;
     height: 20px;
-    vertical-align: middle;
+    margin-top: 16px;
 }
 .header_menu{
+	display: none;
 	opacity: 0;
 	flex-direction: column;
 	padding-left: 8px;
@@ -143,8 +144,9 @@ input[type="checkbox"]{display: none;}
 	transition: all linear .3s;
 	z-index: 3;
 	position: relative;
+	top: 16px;
+	margin-top: -16px;
 	left: 24px;
-	margin-top: 16px;
 	width: 110px;
 	background-color: #2f4065;
 }
@@ -217,7 +219,7 @@ z-index: 1;
   padding: 16px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 14px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
 }
@@ -474,10 +476,6 @@ z-index: 1;
 	margin: 4px;
 	font-family: 'Open Sans Condensed', sans-serif, arial;
 }
-.info_block:hover{
-	margin-top: -8px;
-	transition: linear all .3s;
-}
 .article_heading-Tv::after{
 	content: '';
 	display: block;
@@ -582,7 +580,7 @@ z-index: 1;
 	border-color: #ff5649;
 }
 .info_heading_tv::before {
-	content: 'грн/мiс';
+	content: 'грн/міс';
 	display: block;
 	font-size: 8px;
 	display: flex;
@@ -591,7 +589,7 @@ z-index: 1;
 	margin: 8px;
 }
 .info_heading_internet::before{
-	content: 'грн/мiс';
+	content: 'грн/міс';
 	display: block;
 	font-size: 8px;
 	display: flex;
@@ -600,7 +598,7 @@ z-index: 1;
 	margin: 8px;
 }
 .info_heading_tv_internet::before{
-	content: 'грн/мiс';
+	content: 'грн/міс';
 	display: block;
 	font-size: 8px;
 	display: flex;
@@ -617,7 +615,7 @@ z-index: 1;
 	justify-content: space-between;
 }
 .speed_internet::before{
-	content: 'Швидкicть';
+	content: 'Швидкіcть';
 	display: block;
 }
 .credit::after{
@@ -838,7 +836,10 @@ footer{
 	.flex{
 		flex-direction: row;
 	}
-
+	.info_block:hover{
+	margin-top: -8px;
+	transition: linear all .3s;
+}
 	.tv_tariffs{
 	width: calc(66.6666% - 16px);
 	max-width: 720px;

@@ -99,7 +99,7 @@
 			<a href="tariffs.html#internet">
 				<article class="info_block internet">
 					<div>
-					<h1 class="article_heading-Internet">Iнтернет</h1>
+					<h1 class="article_heading-Internet">Інтернет</h1>
 					<span class="info_descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro fuga quis commodi dolores, ad, accusantium.</span>
 					<button class="btn">Замовити</button>
 					</div>
@@ -107,7 +107,7 @@
 			</a>
 			<a href="tariffs.html#tv_internet">
 				<article class="info_block tv_internet">
-					<h1 class="article_heading-Internet_Tv">ТБ+Iнтернет</h1>
+					<h1 class="article_heading-Internet_Tv">ТБ+Інтернет</h1>
 					<span class="info_descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, illum velit porro, labore inventore pariatur!</span>
 					<button class="btn">Замовити</button>
 				</article>
@@ -117,50 +117,6 @@
 		<footer>
 				<p class="copyright">&copy; Миралан 2017</p>
 		</footer>
-
-		<script>
-			var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1} 
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-		</script>
-		<script>
-			var slideIndex = 0;
-showSlides_auto();
-
-function showSlides_auto() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none"; 
-    }
-    slideIndex++;
-    if (slideIndex> slides.length) {slideIndex = 1} 
-    slides[slideIndex-1].style.display = "block"; 
-    setTimeout(showSlides_auto, 5000);
-}
-		</script>
+	<script src="js/slider.js" ></script>
 	</body>
 </html>
