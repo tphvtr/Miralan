@@ -59,6 +59,8 @@ footer, .page_wrap:after {
 	height: 40px;
 	display: block;
 	float: right;
+	position: relative;
+	z-index: 4;
 }
 .logo::before{
 	content: '';
@@ -121,8 +123,6 @@ footer, .page_wrap:after {
 	font-size: 12px;
 	text-transform: uppercase;
 	color: #fff;
-	text-shadow: #000 1px 1px 0, #000 -1px -1px 0, 
-                 #000 -1px 1px 0, #000 1px -1px 0;
 }
 .Active{
 	border-left: 2px solid #de6d6e;
@@ -946,8 +946,6 @@ footer{
 	.content{
 		display: block;
 	}
-}
-@media (min-width: 740px){
 	.info_block{
 		max-width: 360px;
 		width: calc(33.333333% - 16px);
