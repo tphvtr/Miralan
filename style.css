@@ -9,17 +9,21 @@ body{
 	font-family: 'Open Sans Condensed', sans-serif, arial, verdana, tahoma;
 }
 header{
+	position: relative;
+	z-index: 3;
 	height: 64px;
 	width: 100%;
 	padding: 8px;
   background-color: #e8ecf0;
-  opacity: .8;
-  border-bottom: #ccc 2px solid
-  margin: 4px;
+  border-bottom: rgba(232, 236, 240, 0.9) 2px solid;
 	font-family: 'Open Sans Condensed', sans-serif, arial;
+	border-bottom:2px #ccc solid;
 }
 nav{
 	margin: 0;
+	height: 64px;
+	position: relative;
+	z-index: 3;
 }
 a{
 	text-decoration: none;
@@ -96,7 +100,17 @@ footer, .page_wrap:after {
 	padding-left: 8px;
 	list-style-type: none;
 	position: relative;
+	border-radius: 4px;
 	z-index: -1;
+}
+.header_menu::before{
+	display: block;
+	content: '';
+	border: 10px solid transparent;
+	border-right: 10px solid #2f4065;
+	position: absolute;
+	left: -20px;
+	top: 16px;
 }
 .header_menu li{
 	margin: 4px 0;
@@ -105,7 +119,10 @@ footer, .page_wrap:after {
 	text-align: center;
 	padding:0 4px;
 	font-size: 12px;
-	color: #000;
+	text-transform: uppercase;
+	color: #fff;
+	text-shadow: #000 1px 1px 0, #000 -1px -1px 0, 
+                 #000 -1px 1px 0, #000 1px -1px 0;
 }
 .Active{
 	border-left: 2px solid #de6d6e;
@@ -125,6 +142,11 @@ input[type="checkbox"]{display: none;}
 	opacity: 1;
 	transition: all linear .3s;
 	z-index: 3;
+	position: relative;
+	left: 24px;
+	margin-top: 16px;
+	width: 110px;
+	background-color: #2f4065;
 }
 #nav_toggle:checked~.header_menu a:hover{
 	border-left: 2px solid #de6d6e;
@@ -172,6 +194,8 @@ max-width: 640px;
 padding: 2px;
 display: flex;
 align-items: center;
+position: relative;
+z-index: 1;
 }
 .slideshow-container {
   position: relative;
@@ -427,6 +451,8 @@ align-items: center;
 		transition: all .3s linear;
 }
 .content{
+	position: relative;
+	z-index: 2;
 	display: flex;
 	flex-direction: column-reverse;
 	padding: 0 16px;
@@ -812,11 +838,7 @@ footer{
 	.flex{
 		flex-direction: row;
 	}
-	.info_block{
-		max-width: 360px;
-		width: calc(33.333333% - 16px);
-		margin: 0 8px;
-	}
+
 	.tv_tariffs{
 	width: calc(66.6666% - 16px);
 	max-width: 720px;
@@ -833,6 +855,9 @@ footer{
 		flex-direction: row;
 		justify-content: center;
 		float: right;
+	}
+	.header_menu::before{
+		display: none;
 	}
 	.header_menu a{
 		padding: 4px;
@@ -920,6 +945,13 @@ footer{
 	}
 	.content{
 		display: block;
+	}
+}
+@media (min-width: 740px){
+	.info_block{
+		max-width: 360px;
+		width: calc(33.333333% - 16px);
+		margin: 0 8px;
 	}
 }
 @media (min-width: 860px){
