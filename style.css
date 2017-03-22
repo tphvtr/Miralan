@@ -831,9 +831,10 @@ footer{
 	color: #fff;
 	font-size: 16px;
 }
-@media (min-width: 400px){
+@media (min-width: 400px) {
 	.main_btns{
 	flex-direction: row;
+}
 }
 @media (min-width: 650px){
 	header{
@@ -848,11 +849,11 @@ footer{
 	.info_block:hover{
 	margin-top: -8px;
 	transition: linear all .3s;
-}
+	}
 	.tv_tariffs{
 	width: calc(66.6666% - 16px);
 	max-width: 720px;
-}
+	}
 	#nav_toogle, .toggle_menu{
 		display: none;
 	}
@@ -962,7 +963,7 @@ footer{
 		margin: 0 8px;
 	}
 }
-@media (min-width: 860px){
+@media (min-width: 860px) {
 	.services{
 		height: 115px;
 		width: 115px;
