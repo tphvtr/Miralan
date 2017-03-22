@@ -30,10 +30,10 @@ $("#tv_60").click(function(){
     $("#choosenTarrif").attr("placeholder","Телебачення 60грн/міс");
 });
 $("#internet_40").click(function(){
-    $("#choosenTarrif").attr("placeholder","Інтернет 10Мбіт/с 60грн/міс");
+    $("#choosenTarrif").attr("placeholder","Інтернет 10Мбіт/с 40грн/міс");
 });
 $("#internet_80").click(function(){
-    $("#choosenTarrif").attr("placeholder","Інтернет 100Мбіт/с 40грн/міс");
+    $("#choosenTarrif").attr("placeholder","Інтернет 100Мбіт/с 80грн/міс");
 });
 $("#tv-internet_80").click(function(){
     $("#choosenTarrif").attr("placeholder","ТБ+Інтернет 10Мбіт/с 80грн/міс");
