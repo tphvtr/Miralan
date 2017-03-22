@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -106,26 +106,36 @@
 			</article>
 		</div>
 		<div id="modal2" class="modal_div" style="opacity: 0; top: 45%; display: none;">
-			<form action="#" id="feedback">
+			<form method="post" action="submit.php" class="phone_form" id="feedback">
 				<span class="modal_close">X</span>
 				<h1>Замовити пiдключення</h1>
 				<input type="text" id="choosenTarrif" disabled>
 				<label for="name">
-					<input type="text"  class="form" id="name" placeholder="Вкажiть Iм'я" required>
+					<input type="text" name="field[name]" class="form" id="name" placeholder="Вкажiть Iм'я">
 				</label>
 				<label for="number">
-					<input type="tel"  class="form" id="number" placeholder="Вкажiть номер телефону" required>
+					<input type="tel"  name="field[phone]" class="form" id="number" pattern="^\+\d{2}\d{3}\d{3}\d{2}\d{2}$" title="Формат: +38 (093) 999 99 99" placeholder="+38 (093) 999 99 99" required>
 				</label>
-				<textarea id="comment"  class="form" cols="30" rows="10" placeholder="Залиште коментар"
+				<textarea id="comment"  name="field[message]" class="form" cols="30" rows="10" placeholder="Залиште коментар"
 				></textarea>
 				<button type="submit" class="btn_place">Відправити</button>
 			</form>
 		</div>
 	<div id="overlay" style="display: none;"></div>
 	</div>
+	<form method="post" action="" id="ajaxform"> <br />
+<input type="text" size="32" maxlength="36" name="name" placeholder="Вaшe имя" val=""> <br />
+<input type="text" size="32" maxlength="36" name="email" placeholder="Вaш email" val=""> <br />
+<input type="text" size="32" maxlength="36" name="subject" placeholder="Тeмa" val=""> <br />
+<textarea cols="25" rows="10" name="message" placeholder="Сooбщeниe.." val=""></textarea> <br />
+<input type="submit" value="GO GO GO"/>
+</form>
 		<footer>
 				<p class="copyright">&copy; BrovaryTV 2017</p>
 		</footer>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="js/jQuery.js" ></script>
+	<script src="js/validate.js"></script>
 	</body>
 </html>
