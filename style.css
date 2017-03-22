@@ -279,6 +279,7 @@ z-index: 1;
 	width: 80px;
 	height: 80px;
 	border-radius: 50%;
+	border-bottom: 2px #ccc solid;
 	background-color: #4eb9f4;
 	margin: 4px;
 	font-family: 'Open Sans Condensed', sans-serif, arial;
@@ -313,6 +314,7 @@ z-index: 1;
 	height: 80px;
 	border-radius: 50%;
 	background-color: #6fc125;
+	border-bottom: 2px #ccc solid;
 	margin: 4px;
 	margin: 4px;
 	font-family: 'Open Sans Condensed', sans-serif, arial;
@@ -346,6 +348,7 @@ z-index: 1;
 	width: 80px;
 	height: 80px;
 	border-radius: 50%;
+	border-bottom: 2px #ccc solid;
 	background-color: #e48f23;
 	margin: 4px;
 	margin: 4px;
@@ -381,6 +384,7 @@ z-index: 1;
 	height: 80px;
 	border-radius: 50%;
 	background-color: #ff5649;
+	border-bottom: 2px #ccc solid;
 	margin: 4px;
 	margin: 4px;
 	font-family: 'Open Sans Condensed', sans-serif, arial;
@@ -798,6 +802,10 @@ textarea{
   position: relative;
   background-color: #717171;
   bottom: 0;
+}
+.btn_place:hover{
+	cursor: pointer;
+  background-color: #616161;
 }
 .modal_close {
 	width: 21px;
