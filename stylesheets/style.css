@@ -1,7 +1,7 @@
 *{
 	box-sizing: border-box;
 }
-
+@import "style";
 body{
 	position: relative;
 	margin: 0 auto;
@@ -40,7 +40,7 @@ img{
   margin-bottom: -142px; 
 }
 .page_wrap:after {
-  content: "";
+  content: '';
   display: block;
 }
 footer, .page_wrap:after {
@@ -69,7 +69,7 @@ footer, .page_wrap:after {
 .logo::before{
 	content: '';
 	display: block;
-	background-image: url(images/logo.png);
+	background-image: url(../images/logo.png);
 	background-repeat: no-repeat;
 	background-size: 100%;
 	width: 30px;
@@ -287,7 +287,7 @@ z-index: 1;
 .services::before{
 	content: '';
 	display: block;
-	background-image: url(images/services.png);
+	background-image: url(../images/services.png);
 	width: 30px;
 	height: 40px;
 	margin:0 auto 4px;
@@ -322,7 +322,7 @@ z-index: 1;
 .pay::before{
 	content: '';
 	display: block;
-	background-image: url(images/money.png);
+	background-image: url(../images/money.png);
 	width: 40px;
 	height: 40px;
 	position: relative;
@@ -357,7 +357,7 @@ z-index: 1;
 .contacts::before{
 	content: '';
 	display: block;
-	background-image: url(images/auth.png);
+	background-image: url(../images/auth.png);
 	width: 40px;
 	height: 40px;
 	position: relative;
@@ -392,7 +392,7 @@ z-index: 1;
 .discount::before{
 	content: '';
 	display: block;
-	background-image: url(images/percent.png);
+	background-image: url(../images/percent.png);
 	width: 40px;
 	height: 40px;
 	position: relative;
@@ -547,7 +547,7 @@ z-index: 1;
 	content: '';
 	display: block;
 	float: left;
-	background-image: url(images/check.png);
+	background-image: url(../images/check.png);
 	background-size: 100%;
 	width: 18px;
 	height: 18px;
@@ -1002,4 +1002,3 @@ footer{
 		height: 135px;
 	}
 }
-
