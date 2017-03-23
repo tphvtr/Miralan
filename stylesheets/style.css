@@ -1,7 +1,6 @@
 *{
 	box-sizing: border-box;
 }
-@import "style";
 body{
 	position: relative;
 	margin: 0 auto;
