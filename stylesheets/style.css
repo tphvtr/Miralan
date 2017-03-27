@@ -834,6 +834,7 @@ footer{
 		display: flex;
 	justify-content: center;
 	align-items: center;
+	border-top: 2px solid #bbb;
 }
 .copyright{
 	color: #fff;
