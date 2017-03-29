@@ -832,9 +832,21 @@ textarea {
 footer {
   background-color: #252823;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   border-top: 2px solid #bbb; }
+
+.footer_menu {
+  list-style-type: none;
+  padding: 0; }
+  .footer_menu a {
+    margin: 0 4px; }
+
+.leftside_column {
+  float: left; }
+
+.rightside_column {
+  float: right; }
 
 .copyright {
   color: #fff;
@@ -967,7 +979,13 @@ footer {
   .info_block {
     max-width: 360px;
     width: calc(33.333333% - 16px);
-    margin: 0 8px; } }
+    margin: 0 8px; }
+
+  .wrap_footer_menu {
+    display: flex; }
+
+  .footer_menu {
+    display: flex; } }
 @media (min-width: 860px) {
   .services {
     height: 115px;
