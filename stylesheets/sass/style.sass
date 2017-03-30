@@ -16,7 +16,6 @@ header
  z-index: 3
  height: 64px
  width: 100%
- padding: 8px
  background-color: #e8ecf0
  border-bottom: rgba(232, 236, 240, 0.9) 2px solid
  font-family: $main_font, sans-serif, arial
@@ -25,6 +24,7 @@ nav
  margin: 0
  height: 64px
  position: relative
+ padding: 8px
  z-index: 3
 a
  text-decoration: none
@@ -46,6 +46,11 @@ footer, .page_wrap:after
  max-width: 960px
  margin: 16px auto
  padding: 16px 8px
+.wrap_header
+ min-width: 320px
+ max-width: 940px
+ margin: auto
+ padding: 0
 .wrap::after
  content: ''
  display: block
@@ -57,6 +62,7 @@ footer, .page_wrap:after
  display: block
  float: right
  position: relative
+ padding: 8px 8px 0 8px
  z-index: 4
 .logo::before
  content: ''
@@ -111,7 +117,7 @@ footer, .page_wrap:after
  text-transform: uppercase
  color: #fff
 .Active
- border-left: 2px solid #de6d6e
+ border-left: 2px solid $red
  margin-left: -2px
 input[type="checkbox"]
  display: none
@@ -201,14 +207,16 @@ input[type="checkbox"]
  position: absolute
  left: 0
  right: 0
- width: 80px
+ width: 100px
  margin: auto
  bottom: 8px
  text-align: center
- background-color: #4eb9f4
+ background-color: #109fee
+ color: white 
  border-radius: 2px
+ padding: 4px 8px
 .btn_slider:hover
- background-color: #ff5649
+ background-color: $red
  color: #fff
 .dot 
  cursor:pointer
@@ -239,7 +247,7 @@ input[type="checkbox"]
  height: 80px
  border-radius: 50%
  border-bottom: 2px #ccc solid
- background-color: #4eb9f4
+ background-color: $blue
  margin: 4px
  font-family: 'Open Sans Condensed', sans-serif, arial
 .services::before
@@ -269,7 +277,7 @@ input[type="checkbox"]
  width: 80px
  height: 80px
  border-radius: 50%
- background-color: #6fc125
+ background-color: $green
  border-bottom: 2px #ccc solid
  margin: 4px
  margin: 4px
@@ -302,7 +310,7 @@ input[type="checkbox"]
  height: 80px
  border-radius: 50%
  border-bottom: 2px #ccc solid
- background-color: #e48f23
+ background-color: $brown
  margin: 4px
  margin: 4px
  font-family: 'Open Sans Condensed', sans-serif, arial
@@ -333,7 +341,7 @@ input[type="checkbox"]
  width: 80px
  height: 80px
  border-radius: 50%
- background-color: #ff5649
+ background-color: $red
  border-bottom: 2px #ccc solid
  margin: 4px
  margin: 4px
@@ -484,20 +492,20 @@ input[type="checkbox"]
  align-self: center
  width: 120px
 .info_heading_tv
- border: 2px solid #e48f23
+ border: 2px solid $brown
 .info_heading_internet
- border: 2px solid #6fc125
+ border: 2px solid $green
 .info_heading_tv_internet
- border: 2px solid #4eb9f4
+ border: 2px solid $blue
 .info_block:hover .info_heading_tv
- color: #ff5649
- border-color: #ff5649
+ color: $red
+ border-color: $red
 .info_block:hover .info_heading_internet
- color: #ff5649
- border-color: #ff5649
+ color: $red
+ border-color: $red
 .info_block:hover .info_heading_tv_internet
- color: #ff5649
- border-color: #ff5649
+ color: $red
+ border-color: $red
 .info_heading_tv::before 
  content: 'грн/міс'
  display: block
@@ -558,78 +566,78 @@ input[type="checkbox"]
  margin: 4px
  font-family: 'Open Sans Condensed', sans-serif, arial
 .tv .btn
- background-color: #e48f23
+ background-color: $brown
 .tv:hover .btn
- background-color: #ff5649
+ background-color: $red
  cursor: pointer
 .tv:hover
- box-shadow: inset 0px 5px 0px 0px #ff5649
+ box-shadow: inset 0px 5px 0px 0px $red
  cursor: pointer
- color: #ff5649
+ color: $red 
 .info_block:hover .info_descr
- color: #ff5649
+ color: $red 
 .info_block:hover .article_heading
- color: #ff5649
+ color: $red 
 .tv:hover .info_heading
- border-color: #ff5649
+ border-color: $red 
 .internet .btn
- background-color: #6fc125
+ background-color: $green
 .internet:hover .btn
- background-color: #ff5649
+ background-color: $red 
  cursor: pointer
 .internet:hover
- box-shadow: inset 0px 5px 0px 0px #ff5649
+ box-shadow: inset 0px 5px 0px 0px $red 
  cursor: pointer
- color: #ff5649
+ color: $red 
 .tv_internet .btn
- background-color: #4eb9f4
+ background-color: $blue 
 .tv_internet:hover .btn
- background-color: #ff5649
+ background-color: $red 
  cursor: pointer
 .tv_internet:hover
- box-shadow: inset 0px 5px 0px 0px #ff5649
+ box-shadow: inset 0px 5px 0px 0px $red 
  cursor: pointer
- color: #ff5649
+ color: $red 
 .tv
  border-radius: 2px
- box-shadow: inset 0px 5px 0px 0px #e48f23
- color: #e48f23
+ box-shadow: inset 0px 5px 0px 0px $brown 
+ color: $brown
 .tv h1
  text-transform: uppercase
- color: #e48f23
+ color: $brown
 .tv:hover h1
- color: #ff5649
+ color: $red 
 .tv .info_descr
- color: #e48f23
+ color: $brown
 .info_block:hover .article_heading::after
- border-color: #ff5649
+ border-color: $red 
 .internet
  border-radius: 2px
- box-shadow: inset 0px 5px 0px 0px #6fc125
- color: #6fc125
+ box-shadow: inset 0px 5px 0px 0px $green
+ color: $green
 .internet h1
  text-transform: uppercase
- color: #6fc125
+ color: $green
 .internet:hover h1
- color: #ff5649
+ color: $red 
 .internet .info_descr
- color: #6fc125
+ color: $green 
 .tv_internet
  border-radius: 2px
- box-shadow: inset 0px 5px 0px 0px #4eb9f4
- color: #4eb9f4
+ box-shadow: inset 0px 5px 0px 0px $blue 
+ color: $blue 
 .tv_internet:hover h1
- color: #ff5649
+ color: $red 
 .tv_internet .article_heading
- color: #4eb9f4
+ color: $blue 
 .tv_internet
  border-radius: 2px
- box-shadow: inset 0px 5px 0px 0px #4eb9f4
+ box-shadow: inset 0px 5px 0px 0px $blue 
 .tv_internet h1
  text-transform: uppercase
- color: #4eb9f4
+ color: $blue 
 .tv_internet .info_descr
- color: #4eb9f4
+ color: $blue 
 #feedback
  display: flex
  flex-direction: column
@@ -671,6 +679,8 @@ textarea
  padding: 6px 0
  border-radius: 2px
  border: 0
+ display: block
+ text-align: center
  position: relative
  background-color: #717171
  bottom: 0
@@ -715,10 +725,14 @@ footer
 .copyright
  color: #fff
  font-size: 16px
+#pays_form
+ @extend #feedback
 @media (min-width: 400px)
  .main_btns
   flex-direction: row
 @media (min-width: 650px)
+ nav
+  padding: 0
  header
   height: 68px
  .slider
@@ -737,34 +751,38 @@ footer
   float: left
  .header_menu
   opacity: 1
-  display: flex
-  flex-direction: row
-  justify-content: center
+  display: block
+  margin: 0
   float: right
- .header_menu::before
-  display: none
+  border: 2px #fff solid
+  padding: 0
+  margin-right: 16px
  .header_menu a
   padding: 4px
- .header_menu a:hover
-  border-bottom: 2px solid #de6d6e
+  margin: 0
+  line-height: 58px
+ .header_menu li
+  background-color: #109fee
+  margin: 0
+  width: 100px
+  text-align: center
+  border: 2px #fff solid 
+  float: left
+ .header_menu::before
+  display: none
+ .header_menu li:hover
+  background-color: $red 
+  transition: all .1s linear
+  cursor: pointer
  .login
-  background-color: #ff5649
-  border-radius: 4px
-  height: 20px
-  padding: 0 2px
+  background-color: #109fee
  .login a
   color: #fff
   text-decoration: underline
- .login:hover a
-  border-bottom: 0
- .header_menu .login:hover
-  transition: all linear .3s
-  transform: scale(1.1)
+  padding: 4px
  .Active
   border-left: 0
-  border-bottom: 2px solid #de6d6e
- .header_menu li
-  margin: 0 8px
+  background-color: $red
  .main_btns
   position: relative
   float: right
@@ -816,6 +834,15 @@ footer
   display: flex
  .footer_menu
   display: flex
+  a
+   color: #fff
+  .Active
+   background-color: unset
+   border-bottom: 2px solid $red 
+  a:hover
+   border-bottom: 2px solid $red 
+  .login
+   background-color: unset
 @media (min-width: 860px)
  .services
   height: 115px
