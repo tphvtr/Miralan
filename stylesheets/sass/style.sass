@@ -5,862 +5,872 @@ $green: #6fc125
 $blue: #4eb9f4
 
 *
- box-sizing: border-box
+	box-sizing: border-box
 body
- position: relative
- margin: 0 auto
- min-width: 320px
- font-family: $main_font, sans-serif, arial, verdana, tahoma
+	position: relative
+	margin: 0 auto
+	min-width: 320px
+	font-family: $main_font, sans-serif, arial, verdana, tahoma
 header
- position: relative
- z-index: 3
- height: 64px
- width: 100%
- background-color: #e8ecf0
- border-bottom: rgba(232, 236, 240, 0.9) 2px solid
- font-family: $main_font, sans-serif, arial
- border-bottom: 2px #ccc solid
+	position: relative
+	z-index: 3
+	height: 64px
+	width: 100%
+	background-color: #e8ecf0
+	border-bottom: rgba(232, 236, 240, 0.9) 2px solid
+	font-family: $main_font, sans-serif, arial
+	border-bottom: 2px #ccc solid
 nav
- margin: 0
- height: 64px
- position: relative
- padding: 8px
- z-index: 3
+	margin: 0
+	height: 64px
+	position: relative
+	padding: 8px
+	z-index: 3
 a
- text-decoration: none
- color: #000
+	text-decoration: none
+	color: #000
 html, body
- height: 100%
+	height: 100%
 img
- width: 100%
+	width: 100%
 .page_wrap
- min-height: 100%
- margin-bottom: -142px
+	min-height: 100%
+	margin-bottom: -142px
 .page_wrap:after
- content: ''
- display: block
+	content: ''
+	display: block
 footer, .page_wrap:after
- height: 142px 
+	height: 142px 
 .wrap
- min-width: 320px
- max-width: 960px
- margin: 16px auto
- padding: 16px 8px
+	min-width: 320px
+	max-width: 960px
+	margin: 16px auto
+	padding: 16px 8px
 .wrap_header
- min-width: 320px
- max-width: 940px
- margin: auto
- padding: 0
+	min-width: 320px
+	max-width: 940px
+	margin: auto
+	padding: 0
 .wrap::after
- content: ''
- display: block
- clear: both
+	content: ''
+	display: block
+	clear: both
 .logo
- position: relative
- display: block
- height: 40px
- display: block
- float: right
- position: relative
- padding: 8px 8px 0 8px
- z-index: 4
+	position: relative
+	display: block
+	height: 40px
+	display: block
+	float: right
+	position: relative
+	padding: 8px 8px 0 8px
+	z-index: 4
 .logo::before
- content: ''
- display: block
- background-image: url('../../images/logo.png')
- background-repeat: no-repeat
- background-size: 100%
- width: 30px
- height: 40px
- margin: 0 2px 0 0
- float: left
+	content: ''
+	display: block
+	background-image: url('../../images/logo.png')
+	background-repeat: no-repeat
+	background-size: 100%
+	width: 30px
+	height: 40px
+	margin: 0 2px 0 0
+	float: left
 .logo_head
- color: black
- font-style: normal
- position: relative
- bottom: -16px
+	color: black
+	font-style: normal
+	position: relative
+	bottom: -16px
 .logo_head
- font-size: 18px
- font-weight: bold
+	font-size: 18px
+	font-weight: bold
 .toggle_menu
- display: block
- position: relative
- z-index: 2
- float: left
- cursor: pointer
- width: 30px
- height: 20px
- margin-top: 16px
+	display: block
+	position: relative
+	z-index: 2
+	float: left
+	cursor: pointer
+	width: 30px
+	height: 20px
+	margin-top: 16px
 .header_menu
- display: none
- opacity: 0
- flex-direction: column
- padding-left: 8px
- list-style-type: none
- position: relative
- border-radius: 4px
- z-index: -1
+	display: none
+	opacity: 0
+	flex-direction: column
+	padding-left: 8px
+	list-style-type: none
+	position: relative
+	border-radius: 4px
+	z-index: -1
+	a
+		text-align: center
+		padding: 0 4px
+		font-size: 12px
+		text-transform: uppercase
+		color: #fff
+	li
+		margin: 4px 0
+	.Active
+		border-left: 2px solid $red
+		margin-left: -2px
 .header_menu::before
- display: block
- content: ''
- border: 10px solid transparent
- border-right: 10px solid #2f4065
- position: absolute
- left: -20px
- top: 16px
-.header_menu li
- margin: 4px 0
-.header_menu a
- text-align: center
- padding: 0 4px
- font-size: 12px
- text-transform: uppercase
- color: #fff
-.Active
- border-left: 2px solid $red
- margin-left: -2px
+	display: block
+	content: ''
+	border: 10px solid transparent
+	border-right: 10px solid #2f4065
+	position: absolute
+	left: -20px
+	top: 16px
 input[type="checkbox"]
- display: none
+	display: none
 #nav_toggle:checked+.toggle_menu::after
- transform: rotate(-45deg)
- margin-top: -8px
+	transform: rotate(-45deg)
+	margin-top: -8px
 #nav_toggle:checked+.toggle_menu::before
- transform: rotate(45deg)
- border-bottom: none
+	transform: rotate(45deg)
+	border-bottom: none
 #nav_toggle:checked~.header_menu
- display: flex
- opacity: 1
- transition: all linear .3s
- z-index: 3
- position: relative
- top: 16px
- margin-top: -16px
- left: 24px
- width: 110px
- background-color: #2f4065
+	display: flex
+	opacity: 1
+	transition: all linear .3s
+	z-index: 3
+	position: relative
+	top: 16px
+	margin-top: -16px
+	left: 24px
+	width: 110px
+	background-color: #2f4065
 #nav_toggle:checked~.header_menu a:hover
- border-left: 2px solid #de6d6e
- margin-left: -2px
+	border-left: 2px solid #de6d6e
+	margin-left: -2px
 .toggle_menu::before, .toggle_menu::after 
- content: ''
- display: block
- border-bottom: 2px solid #ccc
- transition: all linear .3s
- padding: 2px
+	content: ''
+	display: block
+	border-bottom: 2px solid #ccc
+	transition: all linear .3s
+	padding: 2px
 .toggle_menu::before
- border-top: 2px solid #ccc
+	border-top: 2px solid #ccc
 #nav_toggle:checked~.close_menu 
- opacity: 1
- top: 0
- bottom: 0
- left: 0
- right: 0
- background: rgba(255, 255, 255, 0.9)
+	opacity: 1
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	background: rgba(255, 255, 255, 0.9)
 .close_menu 
- transition: all linear .3s
- opacity: 0
- position: fixed
+	transition: all linear .3s
+	opacity: 0
+	position: fixed
 .main_btns
- display: flex
- flex-direction: column
- justify-content: center
- align-items: center
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
 .main_top, .main_bot
- display: flex
+	display: flex
 .main_btns::after
- content: ''
- display: block
- clear: both
+	content: ''
+	display: block
+	clear: both
 .slider
- max-width: 640px
- padding: 2px
- display: flex
- align-items: center
- position: relative
- z-index: 1
+	max-width: 640px
+	padding: 2px
+	display: flex
+	align-items: center
+	position: relative
+	z-index: 1
 .slideshow-container 
- position: relative
-.mySlides 
- display: none
+	position: relative
+.mySlides
+	display: none
 .dot_wrap
- position: relative
- text-align: center
+	position: relative
+	text-align: center
 .prev, .next 
- cursor: pointer
- position: absolute
- top: 50%
- width: auto
- margin-top: -22px
- padding: 16px
- color: white
- font-weight: bold
- font-size: 14px
- transition: 0.6s ease
- border-radius: 0 3px 3px 0
+	cursor: pointer
+	position: absolute
+	top: 50%
+	width: auto
+	margin-top: -22px
+	padding: 16px
+	color: white
+	font-weight: bold
+	font-size: 14px
+	transition: 0.6s ease
+	border-radius: 0 3px 3px 0
 .next 
- right: 0
- border-radius: 3px 0 0 3px
+	right: 0
+	border-radius: 3px 0 0 3px
 .prev:hover, .next:hover 
- background-color: rgba(0,0,0,0.8)
+	background-color: rgba(0,0,0,0.8)
 .btn_slider
- font-size: 16px
- position: absolute
- left: 0
- right: 0
- width: 100px
- margin: auto
- bottom: 8px
- text-align: center
- background-color: #109fee
- color: white 
- border-radius: 2px
- padding: 4px 8px
+	font-size: 16px
+	position: absolute
+	left: 0
+	right: 0
+	width: 100px
+	margin: auto
+	bottom: 8px
+	text-align: center
+	background-color: #109fee
+	color: white 
+	border-radius: 2px
+	padding: 4px 8px
 .btn_slider:hover
- background-color: $red
- color: #fff
+	background-color: $red
+	color: #fff
 .dot 
- cursor:pointer
- height: 13px
- width: 13px
- margin: 0 2px
- background-color: #bbb
- border-radius: 50%
- display: inline-block
- transition: background-color 0.6s ease
+	cursor:pointer
+	height: 13px
+	width: 13px
+	margin: 0 2px
+	background-color: #bbb
+	border-radius: 50%
+	display: inline-block
+	transition: background-color 0.6s ease
 .active, .dot:hover 
- background-color: #717171
+	background-color: #717171
 .fade
- animation-name: fade
- animation-duration: 1.5s
- position: relative
+	animation-name: fade
+	animation-duration: 1.5s
+	position: relative
 @keyframes fade 
- from
-  opacity: .4
- to
-  opacity: 1
+	from
+		opacity: .4
+	to
+		opacity: 1
 .services
- display: flex
- justify-content: center
- align-self: center
- flex-direction: column
- width: 80px
- height: 80px
- border-radius: 50%
- border-bottom: 2px #ccc solid
- background-color: $blue
- margin: 4px
- font-family: 'Open Sans Condensed', sans-serif, arial
+	display: flex
+	justify-content: center
+	align-self: center
+	flex-direction: column
+	width: 80px
+	height: 80px
+	border-radius: 50%
+	border-bottom: 2px #ccc solid
+	background-color: $blue
+	margin: 4px
+	font-family: 'Open Sans Condensed', sans-serif, arial
 .services::before
- content: ''
- display: block
- background-image: url('../../images/services.png')
- width: 30px
- height: 40px
- margin: 0 auto 4px
- position: relative
- top: 8px
- background-size: 100%
- background-repeat: no-repeat
+	content: ''
+	display: block
+	background-image: url('../../images/services.png')
+	width: 30px
+	height: 40px
+	margin: 0 auto 4px
+	position: relative
+	top: 8px
+	background-size: 100%
+	background-repeat: no-repeat
 .services::after
- content: 'Послуги'
- display: block
- position: relative
- top: -16px
- color: #fff
- text-align: center
- font-size: 10px
+	content: 'Послуги'
+	display: block
+	position: relative
+	top: -16px
+	color: #fff
+	text-align: center
+	font-size: 10px
 .pay
- display: flex
- justify-content: center
- flex-direction: column
- align-self: center
- width: 80px
- height: 80px
- border-radius: 50%
- background-color: $green
- border-bottom: 2px #ccc solid
- margin: 4px
- margin: 4px
- font-family: 'Open Sans Condensed', sans-serif, arial
+	display: flex
+	justify-content: center
+	flex-direction: column
+	align-self: center
+	width: 80px
+	height: 80px
+	border-radius: 50%
+	background-color: $green
+	border-bottom: 2px #ccc solid
+	margin: 4px
+	margin: 4px
+	font-family: 'Open Sans Condensed', sans-serif, arial
 .pay::before
- content: ''
- display: block
- background-image: url('../../images/money.png')
- width: 40px
- height: 40px
- position: relative
- top: 8px
- margin: 0 auto 4px
- background-size: 100%
- background-repeat: no-repeat
+	content: ''
+	display: block
+	background-image: url('../../images/money.png')
+	width: 40px
+	height: 40px
+	position: relative
+	top: 8px
+	margin: 0 auto 4px
+	background-size: 100%
+	background-repeat: no-repeat
 .pay::after
- content: 'Оплата'
- display: block
- position: relative
- top: -16px
- color: #fff
- text-align: center
- font-size: 10px
+	content: 'Оплата'
+	display: block
+	position: relative
+	top: -16px
+	color: #fff
+	text-align: center
+	font-size: 10px
 .contacts
- display: flex
- justify-content: center
- align-self: center
- flex-direction: column
- width: 80px
- height: 80px
- border-radius: 50%
- border-bottom: 2px #ccc solid
- background-color: $brown
- margin: 4px
- margin: 4px
- font-family: 'Open Sans Condensed', sans-serif, arial
+	display: flex
+	justify-content: center
+	align-self: center
+	flex-direction: column
+	width: 80px
+	height: 80px
+	border-radius: 50%
+	border-bottom: 2px #ccc solid
+	background-color: $brown
+	margin: 4px
+	margin: 4px
+	font-family: 'Open Sans Condensed', sans-serif, arial
 .contacts::before
- content: ''
- display: block
- background-image: url('../../images/auth.png')
- width: 40px
- height: 40px
- position: relative
- top: 8px
- margin: 0 auto 4px
- background-size: 100%
- background-repeat: no-repeat
+	content: ''
+	display: block
+	background-image: url('../../images/auth.png')
+	width: 40px
+	height: 40px
+	position: relative
+	top: 8px
+	margin: 0 auto 4px
+	background-size: 100%
+	background-repeat: no-repeat
 .contacts::after
- content: 'Контакти'
- display: block
- position: relative
- top: -16px
- color: #fff
- text-align: center
- font-size: 10px
+	content: 'Контакти'
+	display: block
+	position: relative
+	top: -16px
+	color: #fff
+	text-align: center
+	font-size: 10px
 .discount
- display: flex
- justify-content: center
- align-content: center
- flex-direction: column
- width: 80px
- height: 80px
- border-radius: 50%
- background-color: $red
- border-bottom: 2px #ccc solid
- margin: 4px
- margin: 4px
- font-family: 'Open Sans Condensed', sans-serif, arial
+	display: flex
+	justify-content: center
+	align-content: center
+	flex-direction: column
+	width: 80px
+	height: 80px
+	border-radius: 50%
+	background-color: $red
+	border-bottom: 2px #ccc solid
+	margin: 4px
+	margin: 4px
+	font-family: 'Open Sans Condensed', sans-serif, arial
 .discount::before
- content: ''
- display: block
- background-image: url('../../images/percent.png')
- width: 40px
- height: 40px
- position: relative
- top: 8px
- margin: 0 auto 4px
- background-size: 100%
- background-repeat: no-repeat
+	content: ''
+	display: block
+	background-image: url('../../images/percent.png')
+	width: 40px
+	height: 40px
+	position: relative
+	top: 8px
+	margin: 0 auto 4px
+	background-size: 100%
+	background-repeat: no-repeat
 .discount::after
- content: 'Акції'
- display: block
- position: relative
- top: -16px
- color: #fff
- text-align: center
- font-size: 10px
+	content: 'Акції'
+	display: block
+	position: relative
+	top: -16px
+	color: #fff
+	text-align: center
+	font-size: 10px
 .services:hover:before, .services:hover:after, 
 .pay:hover:before, .pay:hover:after, 
 .contacts:hover:before, .contacts:hover:after, 
 .discount:hover:before, .discount:hover:after	
- opacity: 0.3
- transition: all .3s linear
- border-bottom: 0
+	opacity: 0.3
+	transition: all .3s linear
+	border-bottom: 0
 .services_descr, .pay_descr, .contacts_descr, .discount_descr
- opacity: 0
- height: 24px
- color: #fff
- text-align: center
- font-size: 8px
+	opacity: 0
+	height: 24px
+	color: #fff
+	text-align: center
+	font-size: 8px
 .services:hover
- transition: all linear .3s
- transform: scale(1.1)
+	transition: all linear .3s
+	transform: scale(1.1)
 .services:hover .services_descr
- opacity: 1
- transition: all .3s linear
+	opacity: 1
+	transition: all .3s linear
 .pay:hover
- transition: all linear .3s
- transform: scale(1.1)
+	transition: all linear .3s
+	transform: scale(1.1)
 .pay:hover .pay_descr
- opacity: 1
- transition: all .3s linear
+	opacity: 1
+	transition: all .3s linear
 .contacts:hover
- transition: all linear .3s
- transform: scale(1.1)
+	transition: all linear .3s
+	transform: scale(1.1)
 .contacts:hover .contacts_descr
- opacity: 1
- transition: all .3s linear
+	opacity: 1
+	transition: all .3s linear
 .discount:hover
- transition: all linear .3s
- transform: scale(1.1)
+	transition: all linear .3s
+	transform: scale(1.1)
 .discount:hover .discount_descr
- opacity: 1
- transition: all .3s linear
+	opacity: 1
+	transition: all .3s linear
 .content
- position: relative
- z-index: 2
- display: flex
- flex-direction: column-reverse
- padding: 0 16px
+	position: relative
+	z-index: 2
+	display: flex
+	flex-direction: column-reverse
+	padding: 0 16px
 .info_block
- display: flex
- position: relative
- padding: 16px
- flex-direction: column
- justify-content: flex-start
- align-self: center
- background-color: #f4f6f9
- float: left
- width: 100%
- min-height: 256px
- margin: 16px 0
- border-radius: 4px
- border-bottom: 2px #ccc solid
- margin: 4px
- font-family: 'Open Sans Condensed', sans-serif, arial
+	display: flex
+	position: relative
+	padding: 16px
+	flex-direction: column
+	justify-content: flex-start
+	align-self: center
+	background-color: #f4f6f9
+	float: left
+	width: 100%
+	min-height: 256px
+	margin: 16px 0
+	border-radius: 4px
+	border-bottom: 2px #ccc solid
+	margin: 4px
+	font-family: 'Open Sans Condensed', sans-serif, arial
+	h1
+		font-size: 24px
+		margin: 16px
+		text-align: center
 .article_heading-Tv::after
- content: ''
- display: block
- border-bottom: 2px solid #e48f23
- width: 50px
- margin: auto
+	content: ''
+	display: block
+	border-bottom: 2px solid #e48f23
+	width: 50px
+	margin: auto
 .article_heading-Internet::after
- content: ''
- display: block
- border-bottom: 2px solid #6fc125
- width: 50px
- margin: auto
+	content: ''
+	display: block
+	border-bottom: 2px solid #6fc125
+	width: 50px
+	margin: auto
 .article_heading-Internet_Tv::after
- content: ''
- display: block
- border-bottom: 2px solid #4eb9f4
- width: 50px
- margin: auto
+	content: ''
+	display: block
+	border-bottom: 2px solid #4eb9f4
+	width: 50px
+	margin: auto
 .info_block:hover .article_heading-Internet_Tv::after
- border-bottom: 2px solid #ff5649
+	border-bottom: 2px solid #ff5649
 .info_block:hover .article_heading-Internet::after
- border-bottom: 2px solid #ff5649
+	border-bottom: 2px solid #ff5649
 .info_block:hover .article_heading-Tv::after
- border-bottom: 2px solid #ff5649
+	border-bottom: 2px solid #ff5649
 .info_descr
- display: block
- height: 128px
+	display: block
+	height: 128px
 .info_block::after
- content: ''
- display: block
- clear: both
+	content: ''
+	display: block
+	clear: both
 .centering
- display: flex
- flex-direction: column
- justify-content: center
+	display: flex
+	flex-direction: column
+	justify-content: center
 .flex
- display: flex
- flex-direction: column
- justify-content: center
-.info_block h1
- font-size: 24px
- margin: 16px
- text-align: center
+	display: flex
+	flex-direction: column
+	justify-content: center
 .oportunities
- list-style-type: none
- padding: 0
- margin: 8px 0 32px
+	list-style-type: none
+	padding: 0
+	margin: 8px 0 32px
 .oportunities li
- text-indent: 8px
+	text-indent: 8px
 .oportunities li::before
- content: ''
- display: block
- float: left
- background-image: url('../../images/check.png')
- background-size: 100%
- width: 18px
- height: 18px
+	content: ''
+	display: block
+	float: left
+	background-image: url('../../images/check.png')
+	background-size: 100%
+	width: 18px
+	height: 18px
 .info_heading_tv, .info_heading_internet, .info_heading_tv_internet
- border-top-right-radius: 50px
- border-top-left-radius: 50px
- border-bottom-left-radius: 50px
- border-bottom-right-radius: 50px
- padding: 16px
- display: flex
- justify-content: center
- align-self: center
- width: 120px
+	border-top-right-radius: 50px
+	border-top-left-radius: 50px
+	border-bottom-left-radius: 50px
+	border-bottom-right-radius: 50px
+	padding: 16px
+	display: flex
+	justify-content: center
+	align-self: center
+	width: 120px
 .info_heading_tv
- border: 2px solid $brown
+	border: 2px solid $brown
 .info_heading_internet
- border: 2px solid $green
+	border: 2px solid $green
 .info_heading_tv_internet
- border: 2px solid $blue
+	border: 2px solid $blue
 .info_block:hover .info_heading_tv
- color: $red
- border-color: $red
+	color: $red
+	border-color: $red
 .info_block:hover .info_heading_internet
- color: $red
- border-color: $red
+	color: $red
+	border-color: $red
 .info_block:hover .info_heading_tv_internet
- color: $red
- border-color: $red
+	color: $red
+	border-color: $red
 .info_heading_tv::before 
- content: 'грн/міс'
- display: block
- font-size: 12px
- display: flex
- justify-content: center
- align-self: center
- margin: 8px
+	content: 'грн/міс'
+	display: block
+	font-size: 12px
+	display: flex
+	justify-content: center
+	align-self: center
+	margin: 8px
 .info_heading_internet::before
- content: 'грн/міс'
- display: block
- font-size: 12px
- display: flex
- justify-content: center
- align-self: center
- margin: 8px
+	content: 'грн/міс'
+	display: block
+	font-size: 12px
+	display: flex
+	justify-content: center
+	align-self: center
+	margin: 8px
 .info_heading_tv_internet::before
- content: 'грн/міс'
- display: block
- font-size: 12px
- display: flex
- justify-content: center
- align-self: center
- margin: 8px
+	content: 'грн/міс'
+	display: block
+	font-size: 12px
+	display: flex
+	justify-content: center
+	align-self: center
+	margin: 8px
 .info_wrap
- display: flex
- flex-direction: column
+	display: flex
+	flex-direction: column
 .speed_internet
- display: flex
- justify-content: space-between
+	display: flex
+	justify-content: space-between
 .speed_internet::before
- content: 'Швидкіcть'
- display: block
+	content: 'Швидкіcть'
+	display: block
 .credit::after
- content: '5 днiв'
- display: block
- float: right
+	content: '5 днiв'
+	display: block
+	float: right
 .analog_chnls::after
- content: '70'
- display: block
- float: right
+	content: '70'
+	display: block
+	float: right
 .digital_chnls::after
- content: '80'
- display: block
- float: right
+	content: '80'
+	display: block
+	float: right
 .btn
- color: #fff
- text-decoration: none
- width: 100%
- margin: 0 auto
- padding: 6px 0
- border-top-right-radius: 2px
- border-top-left-radius: 2px
- border: 0
- display: flex
- justify-content: center
- align-self: center
- margin: 4px
- font-family: 'Open Sans Condensed', sans-serif, arial
+	color: #fff
+	text-decoration: none
+	width: 100%
+	margin: 0 auto
+	padding: 6px 0
+	border-top-right-radius: 2px
+	border-top-left-radius: 2px
+	border: 0
+	display: flex
+	justify-content: center
+	align-self: center
+	margin: 4px
+	font-family: 'Open Sans Condensed', sans-serif, arial
 .tv .btn
- background-color: $brown
+	background-color: $brown
 .tv:hover .btn
- background-color: $red
- cursor: pointer
+	background-color: $red
+	cursor: pointer
 .tv:hover
- box-shadow: inset 0px 5px 0px 0px $red
- cursor: pointer
- color: $red 
-.info_block:hover .info_descr
- color: $red 
-.info_block:hover .article_heading
- color: $red 
-.tv:hover .info_heading
- border-color: $red 
-.internet .btn
- background-color: $green
-.internet:hover .btn
- background-color: $red 
- cursor: pointer
-.internet:hover
- box-shadow: inset 0px 5px 0px 0px $red 
- cursor: pointer
- color: $red 
-.tv_internet .btn
- background-color: $blue 
-.tv_internet:hover .btn
- background-color: $red 
- cursor: pointer
-.tv_internet:hover
- box-shadow: inset 0px 5px 0px 0px $red 
- cursor: pointer
- color: $red 
-.tv
- border-radius: 2px
- box-shadow: inset 0px 5px 0px 0px $brown 
- color: $brown
-.tv h1
- text-transform: uppercase
- color: $brown
+	box-shadow: inset 0px 5px 0px 0px $red
+	cursor: pointer
+	color: $red 
 .tv:hover h1
- color: $red 
-.tv .info_descr
- color: $brown
-.info_block:hover .article_heading::after
- border-color: $red 
-.internet
- border-radius: 2px
- box-shadow: inset 0px 5px 0px 0px $green
- color: $green
-.internet h1
- text-transform: uppercase
- color: $green
+	color: $red 
+.info_block:hover .info_descr
+	color: $red 
+.info_block:hover .article_heading
+	color: $red 
+.tv:hover .info_heading
+	border-color: $red 
+.internet .btn
+	background-color: $green
+.internet:hover .btn
+	background-color: $red 
+	cursor: pointer
+.internet:hover
+	box-shadow: inset 0px 5px 0px 0px $red 
+	cursor: pointer
+	color: $red
 .internet:hover h1
- color: $red 
+	color: $red  
+.tv_internet .btn
+	background-color: $blue 
+.tv_internet:hover .btn
+	background-color: $red 
+	cursor: pointer
+.tv_internet:hover
+	box-shadow: inset 0px 5px 0px 0px $red 
+	cursor: pointer
+	color: $red 
+.tv
+	border-radius: 2px
+	box-shadow: inset 0px 5px 0px 0px $brown 
+	color: $brown
+	h1
+		text-transform: uppercase
+		color: $brown
+.tv .info_descr
+	color: $brown
+.info_block:hover .article_heading::after
+	border-color: $red 
+.internet
+	border-radius: 2px
+	box-shadow: inset 0px 5px 0px 0px $green
+	color: $green
+	h1
+		text-transform: uppercase
+		color: $green
 .internet .info_descr
- color: $green 
+	color: $green 
 .tv_internet
- border-radius: 2px
- box-shadow: inset 0px 5px 0px 0px $blue 
- color: $blue 
+	border-radius: 2px
+	box-shadow: inset 0px 5px 0px 0px $blue 
+	color: $blue 
 .tv_internet:hover h1
- color: $red 
+	color: $red 
 .tv_internet .article_heading
- color: $blue 
+	color: $blue 
 .tv_internet
- border-radius: 2px
- box-shadow: inset 0px 5px 0px 0px $blue 
-.tv_internet h1
- text-transform: uppercase
- color: $blue 
+	border-radius: 2px
+	box-shadow: inset 0px 5px 0px 0px $blue 
+	h1
+		text-transform: uppercase
+		color: $blue 
 .tv_internet .info_descr
- color: $blue 
+	color: $blue 
 #feedback
- display: flex
- flex-direction: column
- position: fixed
- top: calc(50% - 128px)
- left: calc(50% - 128px)
- margin: 0 auto
- z-index: 7
- width: 256px
- background-color: #252823
- border-bottom: 2px solid #fff
- border-top: 2px solid #fff
- padding: 8px
- border-radius: 4px
-#feedback h1
- font-size: 16px
- color: #fff
- text-align: center
+	display: flex
+	flex-direction: column
+	position: fixed
+	top: calc(50% - 128px)
+	left: calc(50% - 128px)
+	margin: 0 auto
+	z-index: 7
+	width: 256px
+	background-color: #252823
+	border-bottom: 2px solid #fff
+	border-top: 2px solid #fff
+	padding: 8px
+	border-radius: 4px
+	h1
+		font-size: 16px
+		color: #fff
+		text-align: center
 #comment
- width: 100%
- height: 48px
- padding: 8px
- margin: 8px 0
+	width: 100%
+	height: 48px
+	padding: 8px
+	margin: 8px 0
 input[type="tel"], input[type="text"]
- border: 0
- padding: 8px
- margin: 8px 0
- width: 100%
+	border: 0
+	padding: 8px
+	margin: 8px 0
+	width: 100%
 #choosenTarrif
- background-color: rgba(187, 187, 187, 0.1)
- color: #fff
+	background-color: rgba(187, 187, 187, 0.1)
+	color: #fff
 textarea
- margin: 0 0 8px
+	margin: 0 0 8px
 .btn_place
- color: #fff
- text-decoration: none
- width: 100%
- margin: 16px auto 8px
- padding: 6px 0
- border-radius: 2px
- border: 0
- display: block
- text-align: center
- position: relative
- background-color: #717171
- bottom: 0
+	color: #fff
+	text-decoration: none
+	width: 100%
+	margin: 16px auto 8px
+	padding: 6px 0
+	border-radius: 2px
+	border: 0
+	display: block
+	text-align: center
+	position: relative
+	background-color: #717171
+	bottom: 0
 .btn_place:hover
- cursor: pointer
- background-color: #616161
+	cursor: pointer
+	background-color: #616161
 .modal_close 
- width: 21px
- height: 21px
- position: absolute
- top: 10px
- right: 10px
- cursor: pointer
- display: block
- color: #fff
+	width: 21px
+	height: 21px
+	position: absolute
+	top: 10px
+	right: 10px
+	cursor: pointer
+	display: block
+	color: #fff
 #overlay 
- z-index: 6
- position: fixed 
- background-color: #000
- opacity: 0.8
- width: 100%
- height: 100% 
- top: 0
- left: 0
- cursor: pointer
- display: none
+	z-index: 6
+	position: fixed 
+	background-color: #000
+	opacity: 0.8
+	width: 100%
+	height: 100% 
+	top: 0
+	left: 0
+	cursor: pointer
+	display: none
 footer
- background-color: #252823
- display: flex
- justify-content: space-around
- align-items: center
- border-top: 2px solid #bbb
+	background-color: #252823
+	display: flex
+	justify-content: space-around
+	align-items: center
+	border-top: 2px solid #bbb
 .footer_menu
- list-style-type: none
- padding: 0
- a
-  margin: 0 4px
+	list-style-type: none
+	padding: 0
+	a
+		margin: 0 8px
+		color: #fff
+	.Active
+		border-left: 2px solid $red
+	li:hover
+		@extend .Active
+		margin-left: -2px
 .leftside_column
- float: left
+	float: left
 .rightside_column
- float: right
+	float: right
 .copyright
- color: #fff
- font-size: 16px
+	color: #fff
+	font-size: 16px
 #pays_form
- @extend #feedback
+	@extend #feedback
 @media (min-width: 400px)
- .main_btns
-  flex-direction: row
+	.main_btns
+		flex-direction: row
 @media (min-width: 650px)
- nav
-  padding: 0
- header
-  height: 68px
- .slider
-  height: 320px
- .flex
-  flex-direction: row
- .info_block:hover
-  margin-top: -8px
-  transition: linear all .3s
- .tv_tariffs
-  width: calc(66.6666% - 16px)
-  max-width: 720px
- #nav_toogle, .toggle_menu
-  display: none
- .logo
-  float: left
- .header_menu
-  opacity: 1
-  display: block
-  margin: 0
-  float: right
-  border: 2px #fff solid
-  padding: 0
-  margin-right: 16px
- .header_menu a
-  padding: 4px
-  margin: 0
-  line-height: 58px
- .header_menu li
-  background-color: #109fee
-  margin: 0
-  width: 88px
-  text-align: center
-  border: 2px #fff solid 
-  float: left
- .header_menu::before
-  display: none
- .header_menu li:hover
-  background-color: $red 
-  transition: all .1s linear
-  cursor: pointer
- .login
-  background-color: #109fee
- .login a
-  color: #fff
-  text-decoration: underline
-  padding: 4px
- .Active
-  border-left: 0
-  background-color: $red
- .main_btns
-  position: relative
-  float: right
-  display: flex
-  align-items: flex-start
-  min-height: 320px
-  margin: 0
-  padding: 8px
- .main_top
-  height: 296px
- .main_top, .main_bot
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  align-self: center
- .services::after
-  font-size: 12px
- .pay::after
-  font-size: 12px
- .contacts::before
-  top: 12px
- .contacts::after
-  font-size: 12px
-  top: -12px
- .discount::before
-  top: 12px
- .discount::after
-  font-size: 12px
-  top: -12px
- .services
-  height: 95px
-  width: 95px
- .pay
-  width: 85px
-  height: 85px
- .contacts
-  width: 105px
-  height: 105px
- .discount
-  width: 105px
-  height: 105px
- .content
-  display: block
- .info_block
-  max-width: 360px
-  width: calc(33.333333% - 16px)
-  margin: 0 8px
- .wrap_footer_menu
-  display: flex
- .footer_menu
-  display: flex
-  a
-   color: #fff
-  .Active
-   background-color: unset
-   border-bottom: 2px solid $red 
-  a:hover
-   border-bottom: 2px solid $red 
-  .login
-   background-color: unset
+	nav
+		padding: 0
+	header
+		height: 68px
+	.slider
+		height: 320px
+	.flex
+		flex-direction: row
+	._b_block:hover
+		margin-top: -8px
+		transition: linear all .3s
+	.tv_tariffs
+		width: calc(66.6666% - 16px)
+		max-width: 720px
+	#nav_toogle, .toggle_menu
+		display: none
+	.logo
+		float: left
+	.header_menu
+		opacity: 1
+		display: block
+		margin: 0
+		float: right
+		border: 2px #fff solid
+		padding: 0
+		margin-right: 16px 
+		a
+			padding: 4px
+			margin: 0
+			line-height: 58px
+		li
+			background-color: #109fee
+			margin: 0
+			width: 88px
+			text-align: center
+			border: 2px #fff solid 
+			float: left
+		li:hover
+			background-color: $red 
+			transition: all .1s linear
+			cursor: pointer
+		.Active
+			background-color: $red
+		.login::after
+			content: ''
+			display: block
+			position: relative
+			top: 16px
+			right: 8px
+			background-image: url('../../images/login.png')
+			background-size: 100%
+			width: 25px
+			height: 25px
+			float: right
+			vertical-align: middle
+	.header_menu::before
+		display: none
+	.login a
+		color: #fff
+		text-decoration: underline
+		padding: 4px
+	.main_btns
+		position: relative
+		float: right
+		display: flex
+		align-items: flex-start
+		min-height: 320px
+		margin: 0
+		padding: 8px
+	.main_top
+		height: 296px
+	.main_top, .main_bot
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		align-self: center
+	.services::after
+		font-size: 12px
+	.pay::after
+		font-size: 12px
+	.contacts::before
+		top: 12px
+	.contacts::after
+		font-size: 12px
+		top: -12px
+	.discount::before
+		top: 12px
+	.discount::after
+		font-size: 12px
+		top: -12px
+	.services
+		height: 95px
+		width: 95px
+	.pay
+		width: 85px
+		height: 85px
+	.contacts
+		width: 105px
+		height: 105px
+	.discount
+		width: 105px
+		height: 105px
+	.content
+		display: block
+	.info_block
+		max-width: 360px
+		width: calc(33.333333% - 16px)
+		margin: 0 8px
+	.wrap_footer_menu
+		display: flex
+	.footer_menu
+		display: flex
+		a
+			color: #fff
+		a:hover
+			border-bottom: 2px solid $red 
 @media (min-width: 860px)
- .services
-  height: 115px
-  width: 115px
- .services::before
-  top: 12px
- .services::after
-  top: -12px
- .pay
-  width: 105px
-  height: 105px
- .pay::before
-  top: 12px
- .pay::after
-  top: -12px
- .contacts
-  width: 145px
-  height: 145px
- .discount
-  width: 135px
-  height: 135px
+	.services
+		height: 115px
+		width: 115px
+	.services::before
+		top: 12px
+	.services::after
+		top: -12px
+	.pay
+		width: 105px
+		height: 105px
+	.pay::before
+		top: 12px
+	.pay::after
+		top: -12px
+	.contacts
+		width: 145px
+		height: 145px
+	.discount
+		width: 135px
+		height: 135px
