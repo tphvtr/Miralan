@@ -22,11 +22,36 @@
 					<label class="close_menu" for="nav_toggle"></label>
 					<ul class="header_menu">
 						<li class="Active"><a href="#">Головна</a></li>
-						<li><a href="#">Послуги</a></li>
-						<li><a href="#modal2" class="open_modal">Оплата</a></li>
+						<li class="services_li">
+							<label for="services_menu">Послуги</label>
+							<input type="checkbox" id="services_menu">
+							<ul class="second-level_menu">
+								<li><a href="#">Обладнання</a></li>
+								<li class="connecting_service_li">
+									<label for="connecting_service_menu">Підключення</label>
+									<input type="checkbox" id="connecting_service_menu">
+									<ul class="third-level_menu">
+										<li><a href="#">FAQ</a></li>
+										<li><a href="#">Технічні питання</a></li>
+										<li><a href="#">Документи</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Телебачення</a></li>
+								<li><a href="#">Інтернет</a></li>
+								<li><a href="#">ТБ+Інтернет</a></li>
+							</ul>
+						</li>
+						<li class="pay_li">
+							<label for="pay_menu">Оплата</label>
+							<input type="checkbox" id="pay_menu">
+							<ul class="second-level_menu">
+								<li><a href="https://ukrpays.com/v2/services/payment/id/553/">UkrPayS</a></li>
+								<li><a href="#">Друк квитанції</a></li>
+							</ul>
+						</li>
 						<li><a href="#">Акції</a></li>
 						<li><a href="#">Контакти</a></li>
-						<li class="login"><a href="#">Вхід</a></li>
+						<li class="login"><a href="http://stat.brovary.tv">Вхід</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -40,8 +65,8 @@
 							</span>
 						</div>
 					</a>
-					<a href="pay.html">
-						<div href="#modal2" class="open_modal pay">
+					<a href="#modal1" class="open_modal_1">
+						<div class="pay">
 							<span class="pay_descr">Lorem ipsum dolor sit amet.
 							</span>
 						</div>
@@ -93,7 +118,7 @@
 		<div class="wrap">
 			<a href="tariffs.html#tv">
 				<article class="info_block tv">
-					<h1 class="article_heading-Tv">Телебачення</h1>
+					<h2 class="article_heading-Tv">Телебачення</h2>
 					<span class="info_descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cupiditate ipsa iste. Labore, pariatur, quasi.</span>
 					<span class="btn">Замовити</span>
 				</article>	
@@ -101,7 +126,7 @@
 			<a href="tariffs.html#internet">
 				<article class="info_block internet">
 					<div>
-					<h1 class="article_heading-Internet">Інтернет</h1>
+					<h2 class="article_heading-Internet">Інтернет</h2>
 					<span class="info_descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro fuga quis commodi dolores, ad, accusantium.</span>
 					<span class="btn">Замовити</span>
 					</div>
@@ -109,17 +134,17 @@
 			</a>
 			<a href="tariffs.html#tv_internet">
 				<article class="info_block tv_internet">
-					<h1 class="article_heading-Internet_Tv">ТБ+Інтернет</h1>
+					<h2 class="article_heading-Internet_Tv">ТБ+Інтернет</h2>
 					<span class="info_descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, illum velit porro, labore inventore pariatur!</span>
 					<span class="btn">Замовити</span>
 				</article>
 			</a>
 		</div>
-		<div id="modal2" class="modal_div" style="opacity: 0; top: 45%; display: none;">
+		<div id="modal1" class="modal_div" style="opacity: 0; top: 45%; display: none;">
 			<form id="pays_form">
 				<span class="modal_close">X</span>
 				<h1>Оберіть тип оплати</h1>
-				<a href="#" class="btn_place">Ukr-pays</a>
+				<a href="https://ukrpays.com/v2/services/payment/id/553/" class="btn_place">UkrPayS</a>
 				<a href="#" class="btn_place">Друк квитанції</a>
 			</form>
 		</div>
@@ -130,12 +155,12 @@
 				<ul class="footer_menu leftside_column">
 					<li class="Active"><a href="#">Головна</a></li>
 					<li><a href="#">Послуги</a></li>
-					<li><a href="#modal2" class="open_modal">Оплата</a></li>
+					<li><a href="#modal1" class="open_modal_1">Оплата</a></li>
 				</ul>
 				<ul class="footer_menu rightside_column">
 					<li><a href="#">Акції</a></li>
 					<li><a href="#">Контакти</a></li>
-					<li class="login"><a href="#">Вхід</a></li>
+					<li class="login"><a href="http://stat.brovary.tv">Вхід</a></li>
 				</ul>
 			</div>
 			<p class="copyright">&copy; BrovaryTV 2017</p>

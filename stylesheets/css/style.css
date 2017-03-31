@@ -10,7 +10,7 @@ body {
 
 header {
   position: relative;
-  z-index: 3;
+  z-index: 4;
   height: 64px;
   width: 100%;
   background-color: #e8ecf0;
@@ -71,7 +71,7 @@ footer, .page_wrap:after {
   float: right;
   position: relative;
   padding: 8px 8px 0 8px;
-  z-index: 4; }
+  z-index: 5; }
 
 .logo::before {
   content: "";
@@ -121,9 +121,71 @@ footer, .page_wrap:after {
     color: #fff; }
   .header_menu li {
     margin: 4px 0; }
-  .header_menu .Active, .header_menu .footer_menu li:hover, .footer_menu .header_menu li:hover {
+  .header_menu .Active {
     border-left: 2px solid #ff5649;
     margin-left: -2px; }
+  .header_menu .services_li::after, .header_menu .pay_li::after, .header_menu .connecting_service_li::after {
+    content: "";
+    display: block;
+    border: 4px solid transparent;
+    border-left: 4px solid #fff;
+    position: absolute;
+    right: 0;
+    top: 8px; }
+  .header_menu .services_li:hover:after {
+    opacity: 0;
+    transition: all linear 0.2s; }
+  .header_menu .pay_li:hover:after {
+    opacity: 0;
+    transition: all linear 0.2s; }
+  .header_menu .connecting_service_li::after {
+    right: -8px; }
+  .header_menu .connecting_service_li:hover:after {
+    opacity: 0;
+    transition: linear all 0.2s; }
+  .header_menu .services_li, .header_menu .pay_li {
+    position: relative; }
+    .header_menu .services_li .second-level_menu, .header_menu .services_li .connecting_service_li .third-level_menu, .header_menu .connecting_service_li .services_li .third-level_menu, .header_menu .pay_li .second-level_menu, .header_menu .pay_li .connecting_service_li .third-level_menu, .header_menu .connecting_service_li .pay_li .third-level_menu {
+      list-style-type: none;
+      display: none;
+      position: absolute;
+      top: -14px;
+      right: -100px;
+      padding: 8px;
+      border-radius: 2px;
+      background-color: #2f4065; }
+      .header_menu .services_li .second-level_menu a, .header_menu .services_li .connecting_service_li .third-level_menu a, .header_menu .connecting_service_li .services_li .third-level_menu a, .header_menu .pay_li .second-level_menu a, .header_menu .pay_li .connecting_service_li .third-level_menu a, .header_menu .connecting_service_li .pay_li .third-level_menu a {
+        font-size: 10px; }
+      .header_menu .services_li .second-level_menu li, .header_menu .services_li .connecting_service_li .third-level_menu li, .header_menu .connecting_service_li .services_li .third-level_menu li, .header_menu .pay_li .second-level_menu li, .header_menu .pay_li .connecting_service_li .third-level_menu li, .header_menu .connecting_service_li .pay_li .third-level_menu li {
+        float: left; }
+    .header_menu .services_li .second-level_menu::before, .header_menu .services_li .connecting_service_li .third-level_menu::before, .header_menu .connecting_service_li .services_li .third-level_menu::before, .header_menu .pay_li .second-level_menu::before, .header_menu .pay_li .connecting_service_li .third-level_menu::before, .header_menu .connecting_service_li .pay_li .third-level_menu::before {
+      display: block;
+      content: "";
+      border: 6px solid transparent;
+      border-right: 6px solid #fff;
+      position: absolute;
+      opacity: 1;
+      transition: all linear 0.2s;
+      left: -12px;
+      top: 20px; }
+  .header_menu .services_li:hover .second-level_menu, .header_menu .services_li:hover .connecting_service_li .third-level_menu, .header_menu .connecting_service_li .services_li:hover .third-level_menu {
+    display: flex;
+    flex-direction: column; }
+  .header_menu .pay_li .second-level_menu, .header_menu .pay_li .connecting_service_li .third-level_menu, .header_menu .connecting_service_li .pay_li .third-level_menu {
+    left: 103px; }
+  .header_menu .pay_li:hover .second-level_menu, .header_menu .pay_li:hover .connecting_service_li .third-level_menu, .header_menu .connecting_service_li .pay_li:hover .third-level_menu {
+    display: flex;
+    flex-direction: column; }
+  .header_menu .connecting_service_li {
+    position: relative; }
+    .header_menu .connecting_service_li .third-level_menu {
+      flex-direction: column;
+      opacity: 0;
+      left: 92px; }
+  .header_menu .connecting_service_li:hover .third-level_menu {
+    opacity: 1;
+    display: flex;
+    flex-direction: column; }
 
 .header_menu::before {
   display: block;
@@ -149,7 +211,7 @@ input[type="checkbox"] {
   display: flex;
   opacity: 1;
   transition: all linear 0.3s;
-  z-index: 3;
+  z-index: 88;
   position: relative;
   top: 16px;
   margin-top: -16px;
@@ -485,7 +547,7 @@ input[type="checkbox"] {
   border-bottom: 2px #ccc solid;
   margin: 4px;
   font-family: "Open Sans Condensed", sans-serif, arial; }
-  .info_block h1 {
+  .info_block h2 {
     font-size: 24px;
     margin: 16px;
     text-align: center; }
@@ -669,7 +731,7 @@ input[type="checkbox"] {
   cursor: pointer;
   color: #ff5649; }
 
-.tv:hover h1 {
+.tv:hover h2 {
   color: #ff5649; }
 
 .info_block:hover .info_descr {
@@ -693,7 +755,7 @@ input[type="checkbox"] {
   cursor: pointer;
   color: #ff5649; }
 
-.internet:hover h1 {
+.internet:hover h2 {
   color: #ff5649; }
 
 .tv_internet .btn {
@@ -712,7 +774,7 @@ input[type="checkbox"] {
   border-radius: 2px;
   box-shadow: inset 0px 5px 0px 0px #e48f23;
   color: #e48f23; }
-  .tv h1 {
+  .tv h2 {
     text-transform: uppercase;
     color: #e48f23; }
 
@@ -726,7 +788,7 @@ input[type="checkbox"] {
   border-radius: 2px;
   box-shadow: inset 0px 5px 0px 0px #6fc125;
   color: #6fc125; }
-  .internet h1 {
+  .internet h2 {
     text-transform: uppercase;
     color: #6fc125; }
 
@@ -738,7 +800,7 @@ input[type="checkbox"] {
   box-shadow: inset 0px 5px 0px 0px #4eb9f4;
   color: #4eb9f4; }
 
-.tv_internet:hover h1 {
+.tv_internet:hover h2 {
   color: #ff5649; }
 
 .tv_internet .article_heading {
@@ -747,7 +809,7 @@ input[type="checkbox"] {
 .tv_internet {
   border-radius: 2px;
   box-shadow: inset 0px 5px 0px 0px #4eb9f4; }
-  .tv_internet h1 {
+  .tv_internet h2 {
     text-transform: uppercase;
     color: #4eb9f4; }
 
@@ -842,13 +904,16 @@ footer {
 .footer_menu {
   list-style-type: none;
   padding: 0; }
+  .footer_menu li {
+    margin: 8px 0; }
   .footer_menu a {
     margin: 0 8px;
+    padding: 2px 8px;
     color: #fff; }
-  .footer_menu .Active, .footer_menu li:hover {
-    border-left: 2px solid #ff5649; }
-  .footer_menu li:hover {
-    margin-left: -2px; }
+  .footer_menu li:hover a {
+    background-color: #ff5649; }
+  .footer_menu .Active a {
+    background-color: #ff5649; }
 
 .leftside_column {
   float: left; }
@@ -895,7 +960,6 @@ footer {
     display: block;
     margin: 0;
     float: right;
-    border: 2px #fff solid;
     padding: 0;
     margin-right: 16px; }
     .header_menu a {
@@ -909,12 +973,29 @@ footer {
       text-align: center;
       border: 2px #fff solid;
       float: left; }
+    .header_menu .services_li::after, .header_menu .pay_li::after, .header_menu .connecting_service_li::after {
+      left: 0; }
     .header_menu li:hover {
       background-color: #ff5649;
       transition: all 0.1s linear;
       cursor: pointer; }
-    .header_menu .Active, .header_menu .footer_menu li:hover, .footer_menu .header_menu li:hover {
-      background-color: #ff5649; }
+    .header_menu .services_li:hover .second-level_menu, .header_menu .services_li:hover .connecting_service_li .third-level_menu, .header_menu .connecting_service_li .services_li:hover .third-level_menu {
+      flex-direction: row;
+      top: 56px;
+      left: -4px;
+      background-color: unset; }
+    .header_menu .pay_li:hover .second-level_menu, .header_menu .pay_li:hover .connecting_service_li .third-level_menu, .header_menu .connecting_service_li .pay_li:hover .third-level_menu {
+      flex-direction: row;
+      top: 56px;
+      left: -12px;
+      background-color: unset; }
+    .header_menu .connecting_service_li:hover .third-level_menu {
+      flex-direction: row; }
+      .header_menu .connecting_service_li:hover .third-level_menu li {
+        width: 88px; }
+    .header_menu .Active {
+      background-color: #ff5649;
+      border: 2px #fff solid; }
     .header_menu .login::after {
       content: "";
       display: block;
