@@ -56,7 +56,9 @@ footer, .page_wrap:after {
   min-width: 320px;
   max-width: 940px;
   margin: auto;
-  padding: 0; }
+  padding: 0;
+  position: relative;
+  z-index: 1; }
 
 .wrap::after {
   content: "";
@@ -71,7 +73,7 @@ footer, .page_wrap:after {
   float: right;
   position: relative;
   padding: 8px 8px 0 8px;
-  z-index: 5; }
+  z-index: 4; }
 
 .logo::before {
   content: "";
@@ -150,7 +152,7 @@ footer, .page_wrap:after {
       display: none;
       position: absolute;
       top: -14px;
-      right: -100px;
+      right: -75px;
       padding: 8px;
       border-radius: 2px;
       background-color: #2f4065; }
@@ -181,7 +183,7 @@ footer, .page_wrap:after {
     .header_menu .connecting_service_li .third-level_menu {
       flex-direction: column;
       opacity: 0;
-      left: 92px; }
+      left: 67px; }
   .header_menu .connecting_service_li:hover .third-level_menu {
     opacity: 1;
     display: flex;
@@ -211,7 +213,7 @@ input[type="checkbox"] {
   display: flex;
   opacity: 1;
   transition: all linear 0.3s;
-  z-index: 88;
+  z-index: 2;
   position: relative;
   top: 16px;
   margin-top: -16px;
@@ -219,8 +221,8 @@ input[type="checkbox"] {
   width: 110px;
   background-color: #2f4065; }
 
-#nav_toggle:checked ~ .header_menu a:hover {
-  border-left: 2px solid #de6d6e;
+#nav_toggle:checked ~ .header_menu li:hover {
+  border-left: 2px solid #ff5649;
   margin-left: -2px; }
 
 .toggle_menu::before, .toggle_menu::after {
@@ -240,6 +242,9 @@ input[type="checkbox"] {
   left: 0;
   right: 0;
   background: rgba(255, 255, 255, 0.9); }
+
+#nav_toggle:checked ~ .logo {
+  z-index: 1; }
 
 .close_menu {
   transition: all linear 0.3s;
@@ -928,7 +933,7 @@ footer {
 @media (min-width: 400px) {
   .main_btns {
     flex-direction: row; } }
-@media (min-width: 650px) {
+@media (min-width: 750px) {
   nav {
     padding: 0; }
 
@@ -955,6 +960,9 @@ footer {
   .logo {
     float: left; }
 
+  .services_li::after, .header_menu .pay_li::after, .header_menu .connecting_service_li::after {
+    opacity: 0; }
+
   .header_menu {
     opacity: 1;
     display: block;
@@ -965,16 +973,14 @@ footer {
     .header_menu a {
       padding: 4px;
       margin: 0;
-      line-height: 58px; }
+      line-height: 62px; }
     .header_menu li {
       background-color: #109fee;
       margin: 0;
-      width: 88px;
+      width: 104px;
       text-align: center;
       border: 2px #fff solid;
       float: left; }
-    .header_menu .services_li::after, .header_menu .pay_li::after, .header_menu .connecting_service_li::after {
-      left: 0; }
     .header_menu li:hover {
       background-color: #ff5649;
       transition: all 0.1s linear;
@@ -982,17 +988,31 @@ footer {
     .header_menu .services_li:hover .second-level_menu, .header_menu .services_li:hover .connecting_service_li .third-level_menu, .header_menu .connecting_service_li .services_li:hover .third-level_menu {
       flex-direction: row;
       top: 56px;
-      left: -4px;
+      left: -10px;
       background-color: unset; }
+      .header_menu .services_li:hover .second-level_menu a, .header_menu .services_li:hover .connecting_service_li .third-level_menu a, .header_menu .connecting_service_li .services_li:hover .third-level_menu a {
+        display: block;
+        width: 102px;
+        height: 66px;
+        text-align: center; }
     .header_menu .pay_li:hover .second-level_menu, .header_menu .pay_li:hover .connecting_service_li .third-level_menu, .header_menu .connecting_service_li .pay_li:hover .third-level_menu {
       flex-direction: row;
       top: 56px;
-      left: -12px;
+      left: -10px;
       background-color: unset; }
+      .header_menu .pay_li:hover .second-level_menu a, .header_menu .pay_li:hover .connecting_service_li .third-level_menu a, .header_menu .connecting_service_li .pay_li:hover .third-level_menu a {
+        width: 102px;
+        height: 66px;
+        display: block; }
     .header_menu .connecting_service_li:hover .third-level_menu {
-      flex-direction: row; }
-      .header_menu .connecting_service_li:hover .third-level_menu li {
-        width: 88px; }
+      flex-direction: row;
+      top: 64px;
+      left: -10px;
+      background-color: unset; }
+      .header_menu .connecting_service_li:hover .third-level_menu a {
+        width: 102px;
+        height: 66px;
+        display: block; }
     .header_menu .Active {
       background-color: #ff5649;
       border: 2px #fff solid; }
