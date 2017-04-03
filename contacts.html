@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<title>Brovary.tv</title>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 		<link rel="shortcut icon" href="images/favico.ico" type="image/x-icon">
 		<link rel="stylesheet" href="stylesheets/css/style.css">
-		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		</head>
 	<body>
@@ -56,6 +56,9 @@
 				</nav>
 			</div>
 		</header>
+		<div class="wrap">
+			<div id="map"></div>
+		</div>
 		<div id="modal1" class="modal_div" style="opacity: 0; top: 45%; display: none;">
 			<form id="pays_form">
 				<span class="modal_close">X</span>
@@ -69,13 +72,13 @@
 		<footer>
 			<div class="wrap_footer_menu">
 				<ul class="footer_menu leftside_column">
-					<li class="Active"><a href="#">Головна</a></li>
+					<li><a href="#">Головна</a></li>
 					<li><a href="#">Послуги</a></li>
 					<li><a href="#modal1" class="open_modal_1">Оплата</a></li>
 				</ul>
 				<ul class="footer_menu rightside_column">
 					<li><a href="#">Акції</a></li>
-					<li><a href="#">Контакти</a></li>
+					<li  class="Active"><a href="#">Контакти</a></li>
 					<li class="login"><a href="http://stat.brovary.tv">Вхід</a></li>
 				</ul>
 			</div>
@@ -91,7 +94,8 @@
 				<p class="copyright">&copy; BrovaryTV 2017</p>
 			</a>
 		</footer>
-	<script src="js/ymaps.js" ></script>
+	<script src="js/ymaps.js">
+	</script>
 	<script src="js/jQuery.js" ></script>
 	</body>
 </html>

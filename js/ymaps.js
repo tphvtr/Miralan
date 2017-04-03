@@ -60,7 +60,7 @@ iconRed.add(new ymaps.Placemark([50.519230, 30.802144], {
             '<br/>',
             '<a href="tel:+380459372907" style="color: blue">Телефон: 7-29-07</a>',
             '<br/>',
-            '<a href="tel:+380443917287" style="color: blue">Факс: (044)391-72-87</a>',
+            '<a href="tel:+380459372907" style="color: blue">Факс: 7-29-07</a>',
             '</address>'
         ].join('')}));
 
