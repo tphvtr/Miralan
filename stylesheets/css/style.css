@@ -6,7 +6,8 @@ body {
   position: relative;
   margin: 0 auto;
   min-width: 320px;
-  font-family: "Open Sans Condensed", sans-serif, arial, verdana, tahoma; }
+  font-family: "Open Sans Condensed", sans-serif, arial, verdana, tahoma;
+  background-color: rgba(231, 235, 238, 0.2); }
 
 header {
   position: relative;
@@ -37,14 +38,14 @@ img {
 
 .page_wrap {
   min-height: 100%;
-  margin-bottom: -142px; }
+  margin-bottom: -280px; }
 
 .page_wrap:after {
   content: "";
   display: block; }
 
 footer, .page_wrap:after {
-  height: 142px; }
+  height: 280px; }
 
 .wrap {
   min-width: 320px;
@@ -72,7 +73,7 @@ footer, .page_wrap:after {
   display: block;
   float: right;
   position: relative;
-  padding: 8px 8px 0 8px;
+  margin: 8px 8px 0 8px;
   z-index: 4; }
 
 .logo::before {
@@ -134,14 +135,35 @@ footer, .page_wrap:after {
     position: absolute;
     right: 0;
     top: 8px; }
+  .header_menu .services_li::before, .header_menu .pay_li::before, .header_menu .connecting_service_li::before {
+    display: block;
+    content: "";
+    border: 6px solid transparent;
+    border-right: 6px solid #fff;
+    position: absolute;
+    opacity: 0;
+    transition: all linear 0.2s;
+    right: 0;
+    top: 8px; }
   .header_menu .services_li:hover:after {
     opacity: 0;
     transition: all linear 0.2s; }
+  .header_menu .services_li:hover:before {
+    opacity: 1;
+    transition: al linear 0.2s; }
   .header_menu .pay_li:hover:after {
     opacity: 0;
     transition: all linear 0.2s; }
   .header_menu .connecting_service_li::after {
     right: -8px; }
+  .header_menu .connecting_service_li::before {
+    right: -8px; }
+  .header_menu .connecting_service_li:hover:before {
+    opacity: 1;
+    transition: all linear 0.2s; }
+  .header_menu .pay_li:hover:before {
+    opacity: 1;
+    transition: all linear 0.2s; }
   .header_menu .connecting_service_li:hover:after {
     opacity: 0;
     transition: linear all 0.2s; }
@@ -160,16 +182,6 @@ footer, .page_wrap:after {
         font-size: 10px; }
       .header_menu .services_li .second-level_menu li, .header_menu .services_li .connecting_service_li .third-level_menu li, .header_menu .connecting_service_li .services_li .third-level_menu li, .header_menu .pay_li .second-level_menu li, .header_menu .pay_li .connecting_service_li .third-level_menu li, .header_menu .connecting_service_li .pay_li .third-level_menu li {
         float: left; }
-    .header_menu .services_li .second-level_menu::before, .header_menu .services_li .connecting_service_li .third-level_menu::before, .header_menu .connecting_service_li .services_li .third-level_menu::before, .header_menu .pay_li .second-level_menu::before, .header_menu .pay_li .connecting_service_li .third-level_menu::before, .header_menu .connecting_service_li .pay_li .third-level_menu::before {
-      display: block;
-      content: "";
-      border: 6px solid transparent;
-      border-right: 6px solid #fff;
-      position: absolute;
-      opacity: 1;
-      transition: all linear 0.2s;
-      left: -12px;
-      top: 20px; }
   .header_menu .services_li:hover .second-level_menu, .header_menu .services_li:hover .connecting_service_li .third-level_menu, .header_menu .connecting_service_li .services_li:hover .third-level_menu {
     display: flex;
     flex-direction: column; }
@@ -887,6 +899,12 @@ textarea {
   display: block;
   color: #fff; }
 
+#map {
+  width: calc(100% - 16px);
+  height: 640px;
+  border: 1px solid #fff;
+  margin: 0 auto; }
+
 #overlay {
   z-index: 6;
   position: fixed;
@@ -902,6 +920,7 @@ textarea {
 footer {
   background-color: #252823;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   border-top: 2px solid #bbb; }
@@ -930,9 +949,52 @@ footer {
   color: #fff;
   font-size: 16px; }
 
+.copyright:hover {
+  cursor: pointer;
+  color: #ccc; }
+
+.tel, .mail {
+  width: auto;
+  color: #fff;
+  margin: 4px 0;
+  position: relative;
+  text-indent: 8px;
+  text-align: center; }
+
+.tel:hover, .mail:hover {
+  color: #ccc; }
+
+.tel {
+  text-indent: 18px; }
+
+.mail::before, .tel::before {
+  content: "";
+  display: block;
+  float: left;
+  background-image: url("../../images/mail.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 25px; }
+
+.tel::before {
+  background-image: url("../../images/phone.png");
+  width: 20px;
+  height: 20px; }
+
 @media (min-width: 400px) {
   .main_btns {
-    flex-direction: row; } }
+    flex-direction: row; }
+
+  footer {
+    flex-direction: row; }
+
+  .page_wrap {
+    min-height: 100%;
+    margin-bottom: -142px; }
+
+  footer, .page_wrap:after {
+    height: 142px; } }
 @media (min-width: 750px) {
   nav {
     padding: 0; }
@@ -960,16 +1022,13 @@ footer {
   .logo {
     float: left; }
 
-  .services_li::after, .header_menu .pay_li::after, .header_menu .connecting_service_li::after {
-    opacity: 0; }
-
   .header_menu {
     opacity: 1;
     display: block;
     margin: 0;
     float: right;
     padding: 0;
-    margin-right: 16px; }
+    margin-right: 8px; }
     .header_menu a {
       padding: 4px;
       margin: 0;
@@ -995,6 +1054,10 @@ footer {
         width: 102px;
         height: 66px;
         text-align: center; }
+    .header_menu .services_li::after, .header_menu .pay_li::after, .header_menu .connecting_service_li::after {
+      display: none; }
+    .header_menu .services_li::before, .header_menu .pay_li::before, .header_menu .connecting_service_li::before {
+      display: none; }
     .header_menu .pay_li:hover .second-level_menu, .header_menu .pay_li:hover .connecting_service_li .third-level_menu, .header_menu .connecting_service_li .pay_li:hover .third-level_menu {
       flex-direction: row;
       top: 56px;
@@ -1006,12 +1069,10 @@ footer {
         display: block; }
     .header_menu .connecting_service_li:hover .third-level_menu {
       flex-direction: row;
-      top: 64px;
       left: -10px;
       background-color: unset; }
       .header_menu .connecting_service_li:hover .third-level_menu a {
         width: 102px;
-        height: 66px;
         display: block; }
     .header_menu .Active {
       background-color: #ff5649;
@@ -1030,6 +1091,9 @@ footer {
       vertical-align: middle; }
 
   .header_menu::before {
+    display: none; }
+
+  .header_menu .connecting_service_li .pay_li .third-level_menu::before {
     display: none; }
 
   .login a {

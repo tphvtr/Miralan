@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Brovary.tv</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+		<link rel="shortcut icon" href="images/favico.ico" type="image/x-icon">
+		<link rel="stylesheet" href="stylesheets/css/style.css">
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		</head>
+	<body>
+	<div class="page_wrap">
+		<header>
+			<div class="wrap_header">
+				<a href="index.html">
+					<span class="logo">
+						<i class="logo_head">rovaryTV</i>
+					</span>
+				</a>
+				<nav>
+					<input type="checkbox" id="nav_toggle">
+					<label class="toggle_menu" for="nav_toggle"></label>
+					<label class="close_menu" for="nav_toggle"></label>
+					<ul class="header_menu">
+						<li><a href="#">Головна</a></li>
+						<li class="services_li">
+							<a>Послуги</a>
+							<ul class="second-level_menu">
+								<li><a href="#">Обладнання</a></li>
+								<li class="connecting_service_li">
+									<a>Підключення</a>
+									<ul class="third-level_menu">
+										<li><a href="#">FAQ</a></li>
+										<li><a href="#">Технічні питання</a></li>
+										<li><a href="#">Документи</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Телебачення</a></li>
+								<li><a href="#">Інтернет</a></li>
+								<li><a href="#">ТБ+Інтернет</a></li>
+							</ul>
+						</li>
+						<li class="pay_li">
+							<a>Оплата</a>
+							<ul class="second-level_menu">
+								<li><a href="https://ukrpays.com/v2/services/payment/id/553/">Онлайн</a></li>
+								<li><a href="#">Квитанція</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Акції</a></li>
+						<li class="Active"><a href="#">Контакти</a></li>
+						<li class="login"><a href="http://stat.brovary.tv">Вхід</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div id="modal1" class="modal_div" style="opacity: 0; top: 45%; display: none;">
+			<form id="pays_form">
+				<span class="modal_close">X</span>
+				<h1>Оберіть тип оплати</h1>
+				<a href="https://ukrpays.com/v2/services/payment/id/553/" class="btn_place">Онлайн</a>
+				<a href="#" class="btn_place">Друк квитанції</a>
+			</form>
+		</div>
+	<div id="overlay" style="display: none;"></div>
+</div>
+		<footer>
+			<div class="wrap_footer_menu">
+				<ul class="footer_menu leftside_column">
+					<li class="Active"><a href="#">Головна</a></li>
+					<li><a href="#">Послуги</a></li>
+					<li><a href="#modal1" class="open_modal_1">Оплата</a></li>
+				</ul>
+				<ul class="footer_menu rightside_column">
+					<li><a href="#">Акції</a></li>
+					<li><a href="#">Контакти</a></li>
+					<li class="login"><a href="http://stat.brovary.tv">Вхід</a></li>
+				</ul>
+			</div>
+			<div class="wrap_contacts">
+				<a href="mailto:admin@brovary.tv">
+					<p class="mail">admin@brovary.tv</p>
+				</a>
+				<a href="tel:+30459473221">
+					<p class="tel">Телефон: 7-32-21</p>
+				</a>
+			</div>
+			<a href="index.html">
+				<p class="copyright">&copy; BrovaryTV 2017</p>
+			</a>
+		</footer>
+	<script src="js/ymaps.js" ></script>
+	<script src="js/jQuery.js" ></script>
+	</body>
+</html>
