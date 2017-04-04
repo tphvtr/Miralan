@@ -38,12 +38,12 @@ draggable: false
 
 
 iconYellow.add(new ymaps.Placemark([50.521223, 30.802297], { balloonContentBody: [
-            '<address>',
+            '<address style="font-size: 11px;">',
             '<strong>Абон. відділ</strong>',
             '<br/>',
-            'Адрес: Бровари, вул. Симона Петлюри, 13',
+            'Адрес: Бровари, вул. Симона Петлюри,',
             '<br/>',
-            '(вхід з двору)',
+            'буд. 13, (вхід з двору)',
             '<br/>',
             'Робочі години: 9:00-13:00, 15:00-18:00',
             '<br/>',
@@ -53,7 +53,7 @@ iconYellow.add(new ymaps.Placemark([50.521223, 30.802297], { balloonContentBody:
 
 iconRed.add(new ymaps.Placemark([50.519230, 30.802144], { 	
 	balloonContentBody: [
-            '<address>',
+            '<address style="font-size: 11px;">',
             '<strong>Центральний Офіс</strong>',
             '<br/>',
             'Адрес: Бровари, бул. Незалежності,',

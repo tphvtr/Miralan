@@ -797,6 +797,31 @@ textarea
 	left: 0
 	cursor: pointer
 	display: none
+.questions_block
+	background-color: #fff
+	box-shadow: inset 0px 5px 0px 0px $blue
+	border-bottom: 2px #ccc solid
+	padding: 16px
+	h1
+		text-align: center
+	h4
+		text-decoration: underline
+		text-transform: uppercase
+	ul
+		list-style-type: circle
+	.attention
+		color: $red
+	table
+		margin: auto
+	th
+		text-align: center
+		background-color: $blue
+	.price_td
+		text-align: center
+	.number_td
+		background-color: $red
+		color: #fff
+		text-align: center
 footer
 	background-color: #252823
 	display: flex
@@ -854,7 +879,7 @@ footer
 	background-image: url('../../images/phone.png')
 	width: 20px 
 	height: 20px
-@media (min-width: 400px)
+@media (min-width: 450px)
 	.main_btns
 		flex-direction: row
 	footer
@@ -873,7 +898,7 @@ footer
 		height: 320px
 	.flex
 		flex-direction: row
-	._b_block:hover
+	.info_block:hover
 		margin-top: -8px
 		transition: linear all .3s
 	.tv_tariffs
@@ -893,7 +918,8 @@ footer
 		a
 			padding: 4px
 			margin: 0
-			line-height: 62px
+			line-height: 54px
+			display: block
 		li
 			background-color: #109fee
 			margin: 0
@@ -938,18 +964,6 @@ footer
 		.Active
 			background-color: $red
 			border: 2px #fff solid
-		.login::after
-			content: ''
-			display: block
-			position: relative
-			top: 16px
-			right: 8px
-			background-image: url('../../images/login.png')
-			background-size: 100%
-			width: 25px
-			height: 25px
-			float: right
-			vertical-align: middle
 	.header_menu::before
 		display: none
 	.header_menu .connecting_service_li .pay_li .third-level_menu::before

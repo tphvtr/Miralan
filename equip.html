@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="uk">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<title>Контакти</title>
-		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		<title>Обладнання</title>
+		<link rel="stylesheet" href="stylesheets/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 		<link rel="shortcut icon" href="images/favico.ico" type="image/x-icon">
-		<link rel="stylesheet" href="stylesheets/css/style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		</head>
 	<body>
@@ -28,7 +27,7 @@
 						<li class="services_li">
 							<a>Послуги</a>
 							<ul class="second-level_menu">
-								<li><a href="equip.html">Обладнання</a></li>
+								<li class="Active"><a href="#">Обладнання</a></li>
 								<li class="connecting_service_li">
 									<a>Підключення</a>
 									<ul class="third-level_menu">
@@ -50,14 +49,28 @@
 							</ul>
 						</li>
 						<li><a href="discount.html">Акції</a></li>
-						<li class="Active"><a href="#">Контакти</a></li>
+						<li><a href="contacts.html">Контакти</a></li>
 						<li class="login"><a href="http://stat.brovary.tv">Вхід</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
 		<div class="wrap">
-			<div id="map"></div>
+			<div class="questions_block">
+				<h1>Послуги та обладнання</h1>
+				<p>
+					Для підключення Інтернету вам потрібна тільки мережева карта (ethernet-адаптер) у вашому комп`ютері та наш кабель. У більшості сучасних ПК мережева карта інтегрована, а <span class="attention">20</span> метрiв кабелю для підключення ми надаємо безкоштовно.
+				</p>
+				<table>
+					<tr><th>№</th><th>Назва послуг та обладнання</th><th>Вартість</th></tr>
+   					<tr><td class="number_td">1</td><td>Налаштування роутера абонента</td><td class="price_td">100 грн.</td></tr>
+   					<tr><td class="number_td">2</td><td>Встановлення та налаштування мережевої карти (Ethernet-адаптер)</td><td class="price_td">60 грн.</td></tr>
+   					<tr><td class="number_td">3</td><td>Wi-Fi Роутер 150 Mbps TP-Link 740N та його налаштування</td><td class="price_td">550 грн.</td></tr>
+   					<tr><td class="number_td">4</td><td>Монтаж кабелю в квартирі абонента</td><td class="price_td">5 грн./м</td></tr>
+   					<tr><td class="number_td">5</td><td>Виїзд майстра до абонента</td><td class="price_td">від 50 грн.</td></tr>
+   					<tr><td class="number_td">6</td><td>Розводка кабелю від роутера та його налаштування</td><td class="price_td">Від 100 грн.</td></tr>
+				</table>
+			</div>
 		</div>
 		<div id="modal1" class="modal_div" style="opacity: 0; top: 45%; display: none;">
 			<form id="pays_form">
@@ -67,18 +80,18 @@
 				<a href="docs/kvitanciya.pdf" class="btn_place">Друк квитанції</a>
 			</form>
 		</div>
-	<div id="overlay" style="display: none;"></div>
-</div>
+		<div id="overlay" style="display: none;"></div>
+	</div>
 		<footer>
 			<div class="wrap_footer_menu">
 				<ul class="footer_menu leftside_column">
 					<li><a href="index.html">Головна</a></li>
-					<li><a href="#">Послуги</a></li>
+					<li class="Active"><a href="#">Послуги</a></li>
 					<li><a href="#modal1" class="open_modal_1">Оплата</a></li>
 				</ul>
 				<ul class="footer_menu rightside_column">
 					<li><a href="discount.html">Акції</a></li>
-					<li class="Active"><a href="#">Контакти</a></li>
+					<li><a href="contacts.html">Контакти</a></li>
 					<li class="login"><a href="http://stat.brovary.tv">Вхід</a></li>
 				</ul>
 			</div>
@@ -90,12 +103,10 @@
 					<p class="tel">Телефон: 7-32-21</p>
 				</a>
 			</div>
-			<a href="index.html">
-				<p class="copyright">&copy; BrovaryTV 2017</p>
-			</a>
+			<p class="copyright">&copy; BrovaryTV 2017</p>
 		</footer>
-	<script src="js/ymaps.js">
-	</script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="js/jQuery.js" ></script>
+	<script src="js/validate.js"></script>
 	</body>
 </html>

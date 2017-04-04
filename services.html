@@ -1,31 +1,33 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="uk">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<title>Головна | BrovaryTV</title>
+		<title>Послуги</title>
+		<link rel="stylesheet" href="stylesheets/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 		<link rel="shortcut icon" href="images/favico.ico" type="image/x-icon">
-		<link rel="stylesheet" href="stylesheets/css/style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	</head>
+		</head>
 	<body>
-		<div class="page_wrap">
+	<div class="page_wrap">
 		<header>
 			<div class="wrap_header">
-				<span class="logo">
-					<i class="logo_head">rovaryTV</i>
-				</span>
+				<a href="index.html">
+					<span class="logo">
+						<i class="logo_head">rovaryTV</i>
+					</span>
+				</a>
 				<nav>
 					<input type="checkbox" id="nav_toggle">
 					<label class="toggle_menu" for="nav_toggle"></label>
 					<label class="close_menu" for="nav_toggle"></label>
 					<ul class="header_menu">
-						<li class="Active"><a href="#">Головна</a></li>
-						<li class="services_li">
+						<li><a href="index.html">Головна</a></li>
+						<li class="services_li Active">
 							<a>Послуги</a>
 							<ul class="second-level_menu">
-								<li><a href="equip.html">Обладнання</a></li>
+								<li class="Active"><a href="#">Обладнання</a></li>
 								<li class="connecting_service_li">
 									<a>Підключення</a>
 									<ul class="third-level_menu">
@@ -53,65 +55,6 @@
 				</nav>
 			</div>
 		</header>
-		<div class="wrap content">
-			<div class="main_btns">
-				<div class="main_top">
-					<a href="services.html">
-						<div class="services">
-							<span class="services_descr">Lorem ipsum dolor sit amet
-							</span>
-						</div>
-					</a>
-					<a href="#modal1" class="open_modal_1">
-						<div class="pay">
-							<span class="pay_descr">Lorem ipsum dolor sit amet.
-							</span>
-						</div>
-					</a>
-				</div>
-				<div class="main_bot">
-					<a href="contacts.html">
-						<div class="contacts">
-							<span class="contacts_descr">Lorem ipsum dolor sit amet.
-							</span>
-						</div>
-					</a>
-					<a href="discount.html">
-						<div class="discount">
-							<span class="discount_descr">Lorem ipsum dolor sit amet.
-							</span>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="slider">
-				<div class="slideshow-container">
-				  <div class="mySlides fade">
-				    <img src="images/slider_first.jpg" alt="Акції">
-				    <a href="discount.html" class="btn_slider">Замовити</a>
-				    
-				  </div>
-
-				  <div class="mySlides fade">
-				    <img src="images/slider_2.jpg" alt="Акції">
-				    <a href="discount.html" class="btn_slider">Замовити</a>
-				  </div>
-
-				  <div class="mySlides fade">
-				    <img src="images/slider_first.jpg" alt="Акції">
-				    <a href="discount.html" class="btn_slider">Замовити</a>
-				  </div>
-
-				  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-				  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-				  <div class="dot_wrap">
-				  	<span class="dot" onclick="currentSlide(1)"></span>
-				 	 <span class="dot" onclick="currentSlide(2)"></span>
-				 	 <span class="dot" onclick="currentSlide(3)"></span> 
-				</div>
-				</div>
-			</div>
-		</div>
 		<div class="wrap">
 			<a href="tariffs.html#tv">
 				<article class="info_block tv">
@@ -137,6 +80,17 @@
 				</article>
 			</a>
 		</div>
+		<div class="">
+			<table>
+				<tr><th>№</th><th>Назва послуг та обладнання</th><th>Вартість</th></tr>
+	   			<tr><td class="number_td">1</td><td>Налаштування роутера абонента</td><td class="price_td">100 грн.</td></tr>
+	   			<tr><td class="number_td">2</td><td>Встановлення та налаштування мережевої карти (Ethernet-адаптер)</td><td class="price_td">60 грн.</td></tr>
+	   			<tr><td class="number_td">3</td><td>Wi-Fi Роутер 150 Mbps TP-Link 740N та його налаштування</td><td class="price_td">550 грн.</td></tr>
+	   			<tr><td class="number_td">4</td><td>Монтаж кабелю в квартирі абонента</td><td class="price_td">5 грн./м</td></tr>
+	   			<tr><td class="number_td">5</td><td>Виїзд майстра до абонента</td><td class="price_td">від 50 грн.</td></tr>
+	   			<tr><td class="number_td">6</td><td>Розводка кабелю від роутера та його налаштування</td><td class="price_td">Від 100 грн.</td></tr>
+			</table>
+		</div>
 		<div id="modal1" class="modal_div" style="opacity: 0; top: 45%; display: none;">
 			<form id="pays_form">
 				<span class="modal_close">X</span>
@@ -145,13 +99,13 @@
 				<a href="docs/kvitanciya.pdf" class="btn_place">Друк квитанції</a>
 			</form>
 		</div>
-	<div id="overlay" style="display: none;"></div>
-</div>
+		<div id="overlay" style="display: none;"></div>
+	</div>
 		<footer>
 			<div class="wrap_footer_menu">
 				<ul class="footer_menu leftside_column">
-					<li class="Active"><a href="#">Головна</a></li>
-					<li><a href="tariffs.html">Послуги</a></li>
+					<li><a href="index.html">Головна</a></li>
+					<li class="Active"><a href="#">Послуги</a></li>
 					<li><a href="#modal1" class="open_modal_1">Оплата</a></li>
 				</ul>
 				<ul class="footer_menu rightside_column">
@@ -170,7 +124,8 @@
 			</div>
 			<p class="copyright">&copy; BrovaryTV 2017</p>
 		</footer>
-	<script src="js/slider.js" ></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="js/jQuery.js" ></script>
+	<script src="js/validate.js"></script>
 	</body>
 </html>
