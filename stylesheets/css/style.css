@@ -942,6 +942,9 @@ textarea {
     background-color: #ff5649;
     color: #fff;
     text-align: center; }
+  .questions_block td p {
+    margin: 0;
+    padding-left: 4px; }
 
 footer {
   background-color: #252823;
