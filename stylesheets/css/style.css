@@ -922,9 +922,13 @@ textarea {
   box-shadow: inset 0px 5px 0px 0px #4eb9f4;
   border-bottom: 2px #ccc solid;
   padding: 16px; }
+  .questions_block .lan_connection_textwrap {
+    display: none; }
+  .questions_block #lan_connection:checked ~ .lan_connection_textwrap {
+    display: block; }
   .questions_block h1 {
     text-align: center; }
-  .questions_block h4 {
+  .questions_block h4, .questions_block label {
     text-decoration: underline;
     text-transform: uppercase; }
   .questions_block ul {
@@ -1058,6 +1062,8 @@ footer {
     float: right;
     padding: 0;
     margin-right: 8px; }
+    .header_menu .Active {
+      margin-left: 0; }
     .header_menu a {
       padding: 4px;
       margin: 0;

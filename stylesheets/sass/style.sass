@@ -802,9 +802,13 @@ textarea
 	box-shadow: inset 0px 5px 0px 0px $blue
 	border-bottom: 2px #ccc solid
 	padding: 16px
+	.lan_connection_textwrap
+		display: none
+	#lan_connection:checked~.lan_connection_textwrap
+		display: block
 	h1
 		text-align: center
-	h4
+	h4, label
 		text-decoration: underline
 		text-transform: uppercase
 	ul
@@ -919,6 +923,8 @@ footer
 		float: right
 		padding: 0
 		margin-right: 8px 
+		.Active
+			margin-left: 0
 		a
 			padding: 4px
 			margin: 0
