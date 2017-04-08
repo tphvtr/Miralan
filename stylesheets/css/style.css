@@ -921,14 +921,11 @@ textarea {
   background-color: #fff;
   box-shadow: inset 0px 5px 0px 0px #4eb9f4;
   border-bottom: 2px #ccc solid;
-  padding: 16px; }
-  .questions_block .lan_connection_textwrap {
-    display: none; }
-  .questions_block #lan_connection:checked ~ .lan_connection_textwrap {
-    display: block; }
+  padding: 16px;
+  position: relative; }
   .questions_block h1 {
     text-align: center; }
-  .questions_block h4, .questions_block label {
+  .questions_block h4, .questions_block .label {
     text-decoration: underline;
     text-transform: uppercase; }
   .questions_block ul {
@@ -949,6 +946,37 @@ textarea {
   .questions_block td p {
     margin: 0;
     padding-left: 4px; }
+
+.tabs {
+  position: relative; }
+
+.tabs > label {
+  padding: 4px;
+  background-color: #ccc;
+  border-radius: 5px; }
+
+.tabs > label:hover {
+  cursor: pointer;
+  background-color: #bbb; }
+
+.tabs > input:checked + label {
+  background-color: #fff;
+  box-shadow: inset 0px 5px 0px 0px #4eb9f4; }
+
+#content_win10, #content_winxp, #content_win7, #lan_connection_textwrap {
+  display: none;
+  margin: 32px; }
+  #content_win10 img, #content_winxp img, #content_win7 img, #lan_connection_textwrap img {
+    max-width: 450px;
+    margin: 8px; }
+
+#win10:checked ~ #content_win10, #win7:checked ~ #content_win7, #winxp:checked ~ #content_winxp, #lan_connection:checked ~ #lan_connection_textwrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+input[type="radio"] {
+  display: none; }
 
 footer {
   background-color: #252823;
