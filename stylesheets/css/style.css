@@ -1019,14 +1019,13 @@ footer {
   color: #fff;
   margin: 4px 0;
   position: relative;
-  text-indent: 8px;
   text-align: center; }
 
 .tel:hover, .mail:hover {
   color: #ccc; }
 
 .tel {
-  text-indent: 18px; }
+  text-indent: 44px; }
 
 .mail::before, .tel::before {
   content: "";
@@ -1040,8 +1039,8 @@ footer {
 
 .tel::before {
   background-image: url("../../images/phone.png");
-  width: 20px;
-  height: 20px; }
+  width: 25px;
+  height: 25px; }
 
 @media (min-width: 450px) {
   .main_btns {
