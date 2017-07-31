@@ -362,7 +362,6 @@ input[type="checkbox"] {
   flex-direction: column;
   width: 80px;
   height: 80px;
-  border-radius: 50%;
   border-bottom: 2px #ccc solid;
   background-color: #4eb9f4;
   margin: 4px;
@@ -396,7 +395,6 @@ input[type="checkbox"] {
   align-self: center;
   width: 80px;
   height: 80px;
-  border-radius: 50%;
   background-color: #6fc125;
   border-bottom: 2px #ccc solid;
   margin: 4px;
@@ -431,7 +429,6 @@ input[type="checkbox"] {
   flex-direction: column;
   width: 80px;
   height: 80px;
-  border-radius: 50%;
   border-bottom: 2px #ccc solid;
   background-color: #e48f23;
   margin: 4px;
@@ -466,7 +463,6 @@ input[type="checkbox"] {
   flex-direction: column;
   width: 80px;
   height: 80px;
-  border-radius: 50%;
   background-color: #ff5649;
   border-bottom: 2px #ccc solid;
   margin: 4px;
@@ -511,7 +507,7 @@ input[type="checkbox"] {
 
 .services:hover {
   transition: all linear 0.3s;
-  transform: scale(1.1); }
+  transform: scale(1.05); }
 
 .services:hover .services_descr {
   opacity: 1;
@@ -519,7 +515,7 @@ input[type="checkbox"] {
 
 .pay:hover {
   transition: all linear 0.3s;
-  transform: scale(1.1); }
+  transform: scale(1.05); }
 
 .pay:hover .pay_descr {
   opacity: 1;
@@ -527,7 +523,7 @@ input[type="checkbox"] {
 
 .contacts:hover {
   transition: all linear 0.3s;
-  transform: scale(1.1); }
+  transform: scale(1.05); }
 
 .contacts:hover .contacts_descr {
   opacity: 1;
@@ -535,7 +531,7 @@ input[type="checkbox"] {
 
 .discount:hover {
   transition: all linear 0.3s;
-  transform: scale(1.1); }
+  transform: scale(1.05); }
 
 .discount:hover .discount_descr {
   opacity: 1;
@@ -1158,8 +1154,8 @@ footer {
     display: flex;
     align-items: flex-start;
     min-height: 320px;
-    margin: 0;
-    padding: 8px; }
+    margin-right: -8px;
+    margin-left: 32px; }
 
   .main_top {
     height: 296px; }
@@ -1191,12 +1187,12 @@ footer {
     top: -12px; }
 
   .services {
-    height: 95px;
-    width: 95px; }
+    width: 105px;
+    height: 105px; }
 
   .pay {
-    width: 85px;
-    height: 85px; }
+    width: 105px;
+    height: 105px; }
 
   .contacts {
     width: 105px;
@@ -1225,8 +1221,8 @@ footer {
       border-bottom: 2px solid #ff5649; } }
 @media (min-width: 860px) {
   .services {
-    height: 115px;
-    width: 115px; }
+    width: 145px;
+    height: 145px; }
 
   .services::before {
     top: 12px; }
@@ -1235,8 +1231,8 @@ footer {
     top: -12px; }
 
   .pay {
-    width: 105px;
-    height: 105px; }
+    width: 145px;
+    height: 145px; }
 
   .pay::before {
     top: 12px; }
@@ -1249,7 +1245,7 @@ footer {
     height: 145px; }
 
   .discount {
-    width: 135px;
-    height: 135px; } }
+    width: 145px;
+    height: 145px; } }
 
 /*# sourceMappingURL=style.css.map */
